@@ -1,0 +1,56 @@
+﻿@page
+@model Projekt1.Pages.AjaxFormModel
+@{
+    ViewData["Title"] = "Ajax Example";
+}
+
+<h2>Send a Message</h2>
+
+<form id="messageForm" method="post">
+    @Html.AntiForgeryToken() <!-- Include CSRF token -->
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+    </div>
+    <div>
+        <label for="content">Message:</label>
+        <textarea id="content" name="content" required></textarea>
+    </div>
+    <button type="submit">Send</button>
+</form>
+
+<div id="response"></div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#messageForm').submit(function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                var formData = {
+                    Name: $('#name').val(),
+                    Content: $('#content').val()
+                };
+
+                console.log(JSON.stringify(formData)); // Log the formData to the console
+
+                $.ajax({
+                    url: '/AjaxForm?handler=SendMessage', // Correct URL for the Razor Page
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(formData), // Ensure data is serialized correctly
+                    headers: { "RequestVerificationToken": $('input[name="__RequestVerificationToken"]').val() },
+                    success: function (data) {
+                        console.log('Response:', data); // Log the response object
+                        $('#response').html('<p>Message sent: ' + data.message + '</p>');
+                    },
+                    error: function (xhr, status, error) {
+                        $('#response').html('<p>Error: ' + xhr.responseText + '</p>');
+                        console.log('Error:', xhr.status, xhr.responseText); // Log error details
+                    }
+                });
+            });
+        });
+    </script>
+}

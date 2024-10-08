@@ -1,0 +1,275 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\pages\\dynamicform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\pages\\dynamicform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\pages\\ajaxform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\pages\\ajaxform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\pages\\ajaxform.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\pages\\ajaxform.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\pages\\userinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\pages\\userinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|c:\\users\\vboxuser\\repos\\web\\1\\solucja1\\projekt1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B72A4C95-4397-47EA-B0C5-2B4264332CD0}|Projekt1\\Projekt1.csproj|solutionrelative:projekt1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DynamicForm.cshtml",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\DynamicForm.cshtml",
+              "RelativeDocumentMoniker": "Projekt1\\Pages\\DynamicForm.cshtml",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\DynamicForm.cshtml",
+              "RelativeToolTip": "Projekt1\\Pages\\DynamicForm.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-08T07:16:22.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AjaxForm.cshtml",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\AjaxForm.cshtml",
+              "RelativeDocumentMoniker": "Projekt1\\Pages\\AjaxForm.cshtml",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\AjaxForm.cshtml",
+              "RelativeToolTip": "Projekt1\\Pages\\AjaxForm.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAqwCYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-08T06:10:53.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AjaxForm.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\AjaxForm.cshtml.cs",
+              "RelativeDocumentMoniker": "Projekt1\\Pages\\AjaxForm.cshtml.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\AjaxForm.cshtml.cs",
+              "RelativeToolTip": "Projekt1\\Pages\\AjaxForm.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T06:10:55.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\Register.cshtml",
+              "RelativeDocumentMoniker": "Projekt1\\Pages\\Register.cshtml",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\Register.cshtml",
+              "RelativeToolTip": "Projekt1\\Pages\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T09:51:14.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Projekt1\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Projekt1\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T09:24:42.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "Projekt1\\Pages\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\Register.cshtml.cs",
+              "RelativeToolTip": "Projekt1\\Pages\\Register.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T09:52:12.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserInputModel.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\UserInputModel.cs",
+              "RelativeDocumentMoniker": "Projekt1\\Pages\\UserInputModel.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\UserInputModel.cs",
+              "RelativeToolTip": "Projekt1\\Pages\\UserInputModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T09:36:38.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Projekt1\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Projekt1\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T09:25:46.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Projekt1\\Pages\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Pages\\Privacy.cshtml",
+              "RelativeToolTip": "Projekt1\\Pages\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T09:22:58.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Projekt1\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\appsettings.Development.json",
+              "RelativeToolTip": "Projekt1\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-07T09:15:53.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\appsettings.json",
+              "RelativeDocumentMoniker": "Projekt1\\appsettings.json",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\appsettings.json",
+              "RelativeToolTip": "Projekt1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-07T09:15:46.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Projekt1\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Projekt1\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-07T09:15:22.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "Projekt1\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "Projekt1\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-07T09:15:18.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Projekt1\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Projekt1\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-07T09:14:48.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Program.cs",
+              "RelativeDocumentMoniker": "Projekt1\\Program.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\repos\\web\\1\\Solucja1\\Projekt1\\Program.cs",
+              "RelativeToolTip": "Projekt1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T09:12:58.881Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+﻿@page
+@model Projekt1.Pages.UserFormModel
+@{
+    Layout = "_Layout";
+}
+
+<h2>Rejestracja</h2>
+
+@if (!Model.IsSubmitted)
+{
+    <form method="post">
+        <div>
+            <label>Imię:</label>
+            <input type="text" asp-for="UserInput.Name" />
+            <span asp-validation-for="UserInput.Name" class="text-danger"></span>
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="email" asp-for="UserInput.Email" />
+            <span asp-validation-for="UserInput.Email" class="text-danger"></span>
+        </div>
+        <div>
+            <label>Hasło:</label>
+            <input type="password" asp-for="UserInput.Password" />
+            <span asp-validation-for="UserInput.Password" class="text-danger"></span>
+        </div>
+        <button type="submit">Zarejestruj się</button>
+    </form>
+}
+else
+{
+    <h3>Twoje dane</h3>
+    <p><strong>Imię:</strong> @Model.UserInput.Name</p>
+    <p><strong>Email:</strong> @Model.UserInput.Email</p>
+    <p><strong>Hasło:</strong> @Model.UserInput.Password</p>
+}

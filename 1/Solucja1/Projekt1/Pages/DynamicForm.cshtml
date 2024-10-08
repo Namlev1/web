@@ -1,0 +1,22 @@
+﻿@page
+@model Projekt1.Pages.DynamicFormModel
+@{
+    ViewData["Title"] = "Dynamic Form";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form id="dynamicForm">
+    <label for="inputField">Input:</label>
+    <input type="text" id="inputField" />
+    <button type="button" id="addFieldBtn">Add Field</button>
+    <div id="additionalFields"></div>
+</form>
+
+<script>
+    $(document).ready(function() {
+        $('#addFieldBtn').click(function() {
+            $('#additionalFields').append('<label>Additional Input:</label><input type="text" class="additionalInput" /><br/>');
+        });
+    });
+</script>
