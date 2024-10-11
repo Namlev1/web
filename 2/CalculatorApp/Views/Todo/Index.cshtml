@@ -1,0 +1,45 @@
+@model IEnumerable<CalculatorApp.Models.TodoModel>
+
+<h2>Todo List</h2>
+
+<form asp-action="Index" method="post">
+    <div>
+        <label for="Title">Todo Item:</label>
+        <input type="text" name="Title" />
+    </div>
+    <div>
+        <button type="submit">Add Todo</button>
+    </div>
+</form>
+
+@if (Model != null && Model.Any())
+{
+    <h3>Your Todos:</h3>
+    <ul>
+        @foreach (var todo in Model)
+        {
+            <li>
+                @todo.Title 
+                @if (!todo.IsCompleted)
+                {
+                    <form asp-action="Complete" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@todo.Id" />
+                        <button type="submit">Complete</button>
+                    </form>
+                }
+                else
+                {
+                    <span>(Completed)</span>
+                }
+                <form asp-action="Delete" method="post" style="display:inline;">
+                    <input type="hidden" name="id" value="@todo.Id" />
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No todos available. Add a new one!</p>
+}
