@@ -1,0 +1,86 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "My Quotes";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <input type="text" id="new-quote" placeholder="Add your favorite quote" />
+    <button id="add-quote-btn">Add Quote</button>
+</div>
+
+<ul id="quotes-list">
+    <!-- Lista cytatów zostanie wygenerowana przez JavaScript -->
+</ul>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Funkcja do pobierania cytatów z Local Storage
+        function getQuotes() {
+            const quotes = localStorage.getItem('quotes');
+            return quotes ? JSON.parse(quotes) : [];
+        }
+
+        // Funkcja do zapisywania cytatów w Local Storage
+        function saveQuotes(quotes) {
+            localStorage.setItem('quotes', JSON.stringify(quotes));
+        }
+
+        // Funkcja do renderowania listy cytatów
+        function renderQuotes() {
+            const quotesList = document.getElementById('quotes-list');
+            quotesList.innerHTML = ''; // Wyczyść aktualną listę
+
+            const quotes = getQuotes();
+            quotes.forEach((quote, index) => {
+                const li = document.createElement('li');
+                const text = document.createElement('span');
+                text.textContent = quote;
+
+                // Dodaj przyciski do edytowania i usuwania
+                const editBtn = document.createElement('button');
+                editBtn.textContent = 'Edit';
+                editBtn.onclick = function () {
+                    const newQuote = prompt("Edit quote:", quote);
+                    if (newQuote) {
+                        quotes[index] = newQuote;
+                        saveQuotes(quotes);
+                        renderQuotes();
+                    }
+                };
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = 'Delete';
+                deleteBtn.onclick = function () {
+                    quotes.splice(index, 1); // Usuń cytat
+                    saveQuotes(quotes);
+                    renderQuotes();
+                };
+
+                li.appendChild(text);
+                li.appendChild(editBtn);
+                li.appendChild(deleteBtn);
+                quotesList.appendChild(li);
+            });
+        }
+
+        // Obsługa dodawania nowego cytatu
+        document.getElementById('add-quote-btn').onclick = function () {
+            const newQuote = document.getElementById('new-quote').value;
+            if (newQuote) {
+                const quotes = getQuotes();
+                quotes.push(newQuote);
+                saveQuotes(quotes);
+                renderQuotes();
+                document.getElementById('new-quote').value = ''; // Wyczyść pole tekstowe
+            }
+        };
+
+        // Renderuj cytaty przy pierwszym załadowaniu strony
+        renderQuotes();
+    });
+</script>
+
