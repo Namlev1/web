@@ -1,6 +1,6 @@
 using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 using Library.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Library.Controllers;
 
@@ -13,12 +13,17 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult Dashboard()
     {
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Icons()
+    {
+        return View();
+    }
+    
+    public IActionResult Tables()
     {
         return View();
     }
