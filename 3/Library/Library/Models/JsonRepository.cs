@@ -24,7 +24,7 @@ namespace Library.Models
             return JsonConvert.DeserializeObject<List<T>>(jsonData) ?? new List<T>();
         }
 
-        private void SaveData(List<T> data)
+        public void SaveData(List<T> data)
         {
             var jsonData = JsonConvert.SerializeObject(data, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(_filePath, jsonData);

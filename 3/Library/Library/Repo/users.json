@@ -1,8 +1,17 @@
 [
   {
     "Id": 1,
-    "FirstName": "3",
-    "SecondName": "3",
-    "Books": []
+    "FirstName": "Fname",
+    "SecondName": "Sname",
+    "Books": [
+      {
+        "Id": 2,
+        "Title": "Title2",
+        "Author": "Author2",
+        "ISBN": "2",
+        "ReleaseDate": "2222-02-22T00:00:00",
+        "Genre": "Genre2"
+      }
+    ]
   }
 ]
