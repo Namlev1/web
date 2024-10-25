@@ -48,6 +48,18 @@
                         <p>Table List</p>
                     </a>
                 </li>
+                <li class="@(ViewData["Active"]?.ToString() == "Users" ? "active" : "")">
+                    <a asp-controller="User" asp-action="Index">
+                        <i class="now-ui-icons users_single-02"></i>
+                        <p>Users</p>
+                    </a>
+                </li>
+                <li class="@(ViewData["Active"]?.ToString() == "Books" ? "active" : "")">
+                    <a asp-controller="Book" asp-action="Index">
+                        <i class="now-ui-icons education_agenda-bookmark"></i>
+                        <p>Books</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
