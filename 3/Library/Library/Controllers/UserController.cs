@@ -9,9 +9,45 @@ namespace Library.Controllers
         private readonly JsonRepository<User> _userRepo = new JsonRepository<User>("Repo/users.json");
         private readonly JsonRepository<Book> _bookRepo = new JsonRepository<Book>("Repo/books.json");
 
-        public IActionResult Index()
+        public IActionResult Index(string searchString, string sortOrder)
         {
             var users = _userRepo.GetAll();
+
+            // Filtering
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                users = users.Where(u => u.FirstName.Contains(searchString, StringComparison.OrdinalIgnoreCase) ||
+                                         u.SecondName.Contains(searchString, StringComparison.OrdinalIgnoreCase) ||
+                                         u.Id.ToString().Contains(searchString)).ToList();
+            }
+
+            // Sorting
+            ViewData["FirstNameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "fname_desc" : "";
+            ViewData["SecondNameSortParm"] = sortOrder == "sname" ? "sname_desc" : "sname";
+            ViewData["BookCountSortParm"] = sortOrder == "bookCount" ? "bookCount_desc" : "bookCount";
+
+            switch (sortOrder)
+            {
+                case "fname_desc":
+                    users = users.OrderByDescending(u => u.FirstName).ToList();
+                    break;
+                case "sname":
+                    users = users.OrderBy(u => u.SecondName).ToList();
+                    break;
+                case "sname_desc":
+                    users = users.OrderByDescending(u => u.SecondName).ToList();
+                    break;
+                case "bookCount":
+                    users = users.OrderBy(u => u.Books.Count).ToList();
+                    break;
+                case "bookCount_desc":
+                    users = users.OrderByDescending(u => u.Books.Count).ToList();
+                    break;
+                default:
+                    users = users.OrderBy(u => u.FirstName).ToList();
+                    break;
+            }
+
             return View(users);
         }
 

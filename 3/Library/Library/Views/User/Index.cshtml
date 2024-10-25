@@ -1,10 +1,18 @@
 @model IEnumerable<Library.Models.User>
 @{
-ViewData["Title"] = "Users";
-ViewData["Active"] = "Users";
+    ViewData["Title"] = "Users";
+    ViewData["Active"] = "Users";
 }
 
 <h2>Users</h2>
+
+<form method="get">
+    <p>
+        <input type="text" name="searchString" placeholder="Search by First Name, Second Name, or ID"/>
+        <input type="submit" value="Search"/>
+    </p>
+</form>
+
 <p>
     <a asp-action="Create">Create New User</a>
 </p>
@@ -12,32 +20,49 @@ ViewData["Active"] = "Users";
 <table class="table">
     <thead>
     <tr>
-        <th>First Name</th>
-        <th>Second Name</th>
+        <th>
+            <a asp-action="Index" asp-route-sortOrder="@ViewData["FirstNameSortParm"]">First Name</a>
+        </th>
+        <th>
+            <a asp-action="Index" asp-route-sortOrder="@ViewData["SecondNameSortParm"]">Second Name</a>
+        </th>
+        <th>
+            <a asp-action="Index" asp-route-sortOrder="@ViewData["BookCountSortParm"]">Number of Books</a>
+        </th>
         <th>Books</th>
-        <th>Id</th>
+        <th>ID</th>
         <th>Actions</th>
     </tr>
     </thead>
     <tbody>
     @foreach (var user in Model)
     {
-    <tr>
-        <td>@user.FirstName</td>
-        <td>@user.SecondName</td>
-        <td>
-            @foreach (var book in user.Books)
-            {
-                <span>@book.Title</span><br />
-            }
-        </td>
-        <td>@user.Id</td>
-        <td>
-            <a asp-action="Details" asp-route-id="@user.Id">Details</a> |
-            <a asp-action="Edit" asp-route-id="@user.Id">Edit</a> |
-            <a asp-action="Delete" asp-route-id="@user.Id">Delete</a>
-        </td>
-    </tr>
+        <tr>
+            <td>@user.FirstName</td>
+            <td>@user.SecondName</td>
+            <td>@user.Books.Count</td>
+            <td>
+                @if (user.Books.Count > 0)
+                {
+                    <ul>
+                        @foreach (var book in user.Books)
+                        {
+                            <li>@book.Title</li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <span>No books assigned</span>
+                }
+            </td>
+            <td>@user.Id</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@user.Id">Details</a> |
+                <a asp-action="Edit" asp-route-id="@user.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@user.Id">Delete</a>
+            </td>
+        </tr>
     }
     </tbody>
 </table>

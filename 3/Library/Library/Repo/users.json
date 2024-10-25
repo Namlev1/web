@@ -3,6 +3,12 @@
     "Id": 1,
     "FirstName": "Fname",
     "SecondName": "Sname",
+    "Books": []
+  },
+  {
+    "Id": 2,
+    "FirstName": "Second",
+    "SecondName": "User",
     "Books": [
       {
         "Id": 2,
@@ -11,6 +17,14 @@
         "ISBN": "2",
         "ReleaseDate": "2222-02-22T00:00:00",
         "Genre": "Genre2"
+      },
+      {
+        "Id": 3,
+        "Title": "Title4",
+        "Author": "Author4",
+        "ISBN": "4",
+        "ReleaseDate": "4444-04-04T00:00:00",
+        "Genre": "4"
       }
     ]
   }
