@@ -1,0 +1,19 @@
+@model Library.Models.User
+
+<h2>Delete User</h2>
+
+<div>
+    <h4>Are you sure you want to delete this user?</h4>
+    <p><strong>First Name:</strong> @Model.FirstName</p>
+    <p><strong>Second Name:</strong> @Model.SecondName</p>
+    <p><strong>Id:</strong> @Model.Id</p>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+
+<p>
+    <a asp-action="Index">Back to List</a>
+</p>

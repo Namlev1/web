@@ -1,0 +1,19 @@
+@model Library.Models.User
+
+<h2>User Details</h2>
+
+<div>
+    <h4>@Model.FirstName @Model.SecondName</h4>
+    <p><strong>Books:</strong></p>
+    <p><strong>Id:</strong> @Model.Id</p>
+    <ul>
+        @foreach (var book in Model.Books)
+        {
+        <li>@book.Title by @book.Author</li>
+        }
+    </ul>
+</div>
+
+<p>
+    <a asp-action="Index">Back to List</a>
+</p>
