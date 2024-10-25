@@ -1,0 +1,16 @@
+@model Library.Models.Book
+
+<h2>Book Details</h2>
+
+<div>
+    <h4>@Model.Title</h4>
+    <p><strong>Author:</strong> @Model.Author</p>
+    <p><strong>ISBN:</strong> @Model.ISBN</p>
+    <p><strong>Release Date:</strong> @Model.ReleaseDate.ToString("yyyy-MM-dd")</p>
+    <p><strong>Genre:</strong> @Model.Genre</p>
+    <p><strong>Id:</strong> @Model.Id</p>
+</div>
+
+<p>
+    <a asp-action="Index">Back to List</a>
+</p>
