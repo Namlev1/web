@@ -2,10 +2,14 @@
 @{
     ViewData["Title"] = "Books";
     ViewData["Active"] = "Books";
+    ViewData["Header"] = "Books";
 }
 
-<h2>Books</h2>
+<div class="panel-header panel-header-lg">
+    <canvas id="bookChart"></canvas>
+</div>
 
+<div class="content">
 <form method="get">
     <p>
         <input type="text" name="searchString" placeholder="Search by Title, ISBN, Author, Genre, or ID"/>
@@ -54,3 +58,4 @@
     }
     </tbody>
 </table>
+</div>
