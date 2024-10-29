@@ -1,5 +1,6 @@
 [
   {
+    "ci": "en-GB",
     "Id": 1,
     "Title": "Pride and Prejudice",
     "Author": "Jane Austen",
@@ -8,6 +9,7 @@
     "Genre": "Fiction"
   },
   {
+    "ci": "en-GB",
     "Id": 2,
     "Title": "1984",
     "Author": "George Orwell",
@@ -16,6 +18,7 @@
     "Genre": "Dystopian"
   },
   {
+    "ci": "en-GB",
     "Id": 3,
     "Title": "To Kill a Mockingbird",
     "Author": "Harper Lee",
@@ -24,6 +27,7 @@
     "Genre": "Fiction"
   },
   {
+    "ci": "en-GB",
     "Id": 4,
     "Title": "The Great Gatsby",
     "Author": "F. Scott Fitzgerald",
@@ -32,6 +36,7 @@
     "Genre": "Classic"
   },
   {
+    "ci": "en-GB",
     "Id": 5,
     "Title": "Moby Dick",
     "Author": "Herman Melville",
@@ -40,6 +45,7 @@
     "Genre": "Adventure"
   },
   {
+    "ci": "en-GB",
     "Id": 6,
     "Title": "War and Peace",
     "Author": "Leo Tolstoy",
@@ -48,6 +54,7 @@
     "Genre": "Historical Fiction"
   },
   {
+    "ci": "en-GB",
     "Id": 7,
     "Title": "The Catcher in the Rye",
     "Author": "J.D. Salinger",
@@ -56,6 +63,7 @@
     "Genre": "Fiction"
   },
   {
+    "ci": "en-GB",
     "Id": 8,
     "Title": "The Hobbit",
     "Author": "J.R.R. Tolkien",
@@ -64,6 +72,7 @@
     "Genre": "Fantasy"
   },
   {
+    "ci": "en-GB",
     "Id": 9,
     "Title": "The Brothers Karamazov",
     "Author": "Fyodor Dostoevsky",
@@ -72,11 +81,21 @@
     "Genre": "Philosophical Fiction"
   },
   {
+    "ci": "en-GB",
     "Id": 10,
     "Title": "Crime and Punishment",
     "Author": "Fyodor Dostoevsky",
     "ISBN": "9780486415871",
     "ReleaseDate": "1866-01-01T00:00:00",
     "Genre": "Psychological Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 11,
+    "Title": "The Midnight Library",
+    "Author": "Matt Haig",
+    "ISBN": "9780525559474",
+    "ReleaseDate": "2020-08-18T00:00:00",
+    "Genre": "Fantasy"
   }
 ]
