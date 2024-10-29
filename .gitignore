@@ -365,18 +365,3 @@ FodyWeavers.xsd
 # niepotrzebne katalogi
 **/obj/
 **/Debug/
-/1/Solucja1/Projekt1/obj/Debug/net8.0/Projekt1.AssemblyInfo.cs
-/1/Solucja1/Projekt1/obj/Debug/net8.0/Projekt1.AssemblyInfoInputs.cache
-/1/Solucja1/Projekt1/obj/Debug/net8.0/Projekt1.assets.cache
-/1/Solucja1/Projekt1/obj/Debug/net8.0/Projekt1.GeneratedMSBuildEditorConfig.editorconfig
-/2/CalculatorApp/obj/Debug/net8.0/CalculatorApp.AssemblyInfo.cs
-/2/CalculatorApp/obj/Debug/net8.0/CalculatorApp.AssemblyInfoInputs.cache
-/2/CalculatorApp/obj/Debug/net8.0/CalculatorApp.GeneratedMSBuildEditorConfig.editorconfig
-/3/Library/Library/obj/Debug/net8.0/Library.AssemblyInfo.cs
-/3/Library/Library/obj/Debug/net8.0/Library.AssemblyInfoInputs.cache
-/3/Library/Library/obj/Debug/net8.0/Library.assets.cache
-/3/Library/Library/obj/Debug/net8.0/Library.GeneratedMSBuildEditorConfig.editorconfig
-/3/Library/Library/obj/Library.csproj.nuget.dgspec.json
-/3/Library/Library/obj/Library.csproj.nuget.g.props
-/3/Library/Library/obj/project.assets.json
-/3/Library/Library/obj/project.nuget.cache
