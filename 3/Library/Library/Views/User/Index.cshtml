@@ -4,65 +4,85 @@
     ViewData["Active"] = "Users";
 }
 
-<h2>Users</h2>
+<div class="panel-header panel-header-sm">
+</div>
 
-<form method="get">
-    <p>
-        <input type="text" name="searchString" placeholder="Search by First Name, Second Name, or ID"/>
-        <input type="submit" value="Search"/>
-    </p>
-</form>
+<div class="content">
+    <div class="row">
+        <div class="card card-chart">
+            <div class="card-header">
+                <h2 class="card-title">Users</h2>
+            </div>
 
-<p>
-    <a asp-action="Create">Create New User</a>
-</p>
+            <div class="card-body">
+                <form method="get">
+                    <div class="form-row">
+                        <div class="form-group col-md-3" style="margin-top: 10px">
+                            <input class="form-control" type="text" name="searchString" placeholder="Search by First Name, Second Name, or ID" />
+                        </div>
+                        <div class="form-group col-md-2">
+                            <button type="submit" class="btn btn-primary btn-round">Search</button>
+                        </div>
+                    </div>
 
-<table class="table">
-    <thead>
-    <tr>
-        <th>
-            <a asp-action="Index" asp-route-sortOrder="@ViewData["FirstNameSortParm"]">First Name</a>
-        </th>
-        <th>
-            <a asp-action="Index" asp-route-sortOrder="@ViewData["SecondNameSortParm"]">Second Name</a>
-        </th>
-        <th>
-            <a asp-action="Index" asp-route-sortOrder="@ViewData["BookCountSortParm"]">Number of Books</a>
-        </th>
-        <th>Books</th>
-        <th>ID</th>
-        <th>Actions</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var user in Model)
-    {
-        <tr>
-            <td>@user.FirstName</td>
-            <td>@user.SecondName</td>
-            <td>@user.Books.Count</td>
-            <td>
-                @if (user.Books.Count > 0)
-                {
-                    <ul>
-                        @foreach (var book in user.Books)
-                        {
-                            <li>@book.Title</li>
-                        }
-                    </ul>
-                }
-                else
-                {
-                    <span>No books assigned</span>
-                }
-            </td>
-            <td>@user.Id</td>
-            <td>
-                <a asp-action="Details" asp-route-id="@user.Id">Details</a> |
-                <a asp-action="Edit" asp-route-id="@user.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@user.Id">Delete</a>
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+                </form>
+
+                <p>
+                    <a asp-action="Create" class="btn btn-primary">Create New User</a>
+                </p>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="text-primary">
+                            <tr>
+                                <th>
+                                    <a asp-action="Index" asp-route-sortOrder="@ViewData["FirstNameSortParm"]">First Name</a>
+                                </th>
+                                <th>
+                                    <a asp-action="Index" asp-route-sortOrder="@ViewData["SecondNameSortParm"]">Second Name</a>
+                                </th>
+                                <th>
+                                    <a asp-action="Index" asp-route-sortOrder="@ViewData["BookCountSortParm"]">Number of Books</a>
+                                </th>
+                                <th>Books</th>
+                                <th>ID</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var user in Model)
+                            {
+                                <tr>
+                                    <td>@user.FirstName</td>
+                                    <td>@user.SecondName</td>
+                                    <td>@user.Books.Count</td>
+                                    <td>
+                                        @if (user.Books.Count > 0)
+                                        {
+                                            <ul style ="padding-left: 10px">
+                                                @foreach (var book in user.Books)
+                                                {
+                                                    <li>@book.Title</li>
+                                                }
+                                            </ul>
+                                        }
+                                        else
+                                        {
+                                            <span>No books assigned</span>
+                                        }
+                                    </td>
+                                    <td>@user.Id</td>
+                                    <td>
+                                        <a asp-action="Details" class="btn btn-info btn-outline-info btn-sm" asp-route-id="@user.Id">Details</a>
+                                        <a asp-action="Edit" class="btn btn-primary btn-outline-primary btn-sm" asp-route-id="@user.Id">Edit</a>
+                                        <a asp-action="Delete" class="btn btn-danger btn-outline-danger btn-sm" asp-route-id="@user.Id">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

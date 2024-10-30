@@ -4,20 +4,49 @@ ViewData["Title"] = "Delete user";
 ViewData["Active"] = "Users";
 }
 
-<h2>Delete User</h2>
 
-<div>
-    <h4>Are you sure you want to delete this user?</h4>
-    <p><strong>First Name:</strong> @Model.FirstName</p>
-    <p><strong>Second Name:</strong> @Model.SecondName</p>
-    <p><strong>Id:</strong> @Model.Id</p>
+<div class="panel-header panel-header-sm">
 </div>
 
-<form asp-action="DeleteConfirmed" method="post">
-    <input type="hidden" asp-for="Id" />
-    <button type="submit" class="btn btn-danger">Delete</button>
-</form>
+<div class="content">
+    <div class="col-lg-5">
+        <div class="card card-chart">
+            <div class="card-header">
+                <h5 class="card-category">User Delete</h5>
+                <h4 class="card-title"><strong>Are you sure you want to delete this user?</strong></h4>
+            </div>
+            <div class="card-body">
+                <table class="table" style="width:60%">
+                    <tbody>
 
-<p>
-    <a asp-action="Index">Back to List</a>
-</p>
+                        <tr>
+                            <td><strong>Id:</strong></td>
+                            <td>@Model.Id</td>
+                        </tr>
+                        <tr>
+                            <td><strong>First Name:</strong></td>
+                            <td>@Model.FirstName</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Second Name:</strong></td>
+                            <td>@Model.SecondName</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <form asp-action="DeleteConfirmed" method="post">
+                    <input type="hidden" asp-for="Id" />
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+
+                <p>
+                    <a class="btn btn-primary btn-outline-primary" asp-action="Index">
+                        <i class="now-ui-icons ui-1_simple-remove"></i> Cancel
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>

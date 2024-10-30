@@ -6,73 +6,72 @@
 }
 
 <div class="panel-header panel-header-sm">
-	
 </div>
 
 <div class="content">
-<div class="row">
-<div class="card card-chart">
-<div class="card-header">
-	<h2 class="card-title" >Available books</h2>
-</div>
+	<div class="row">
+		<div class="card card-chart">
+			<div class="card-header">
+				<h2 class="card-title">Available books</h2>
+			</div>
 
-<div class="card-body">
-<form method="get">
-	<div class="form-row">
-		<div class="form-group col-md-3" style="margin-top: 10px" >
-			<input class="form-control" type="text" name="searchString" placeholder="Search by Title, ISBN, Author, Genre, or ID" />
-		</div>
-		<div class="form-group col-md-2" >
-			<button type="submit" class="btn btn-primary btn-round">Search</button>
+			<div class="card-body">
+				<form method="get">
+					<div class="form-row">
+						<div class="form-group col-md-3" style="margin-top: 10px">
+							<input class="form-control" type="text" name="searchString" placeholder="Search by Title, ISBN, Author, Genre, or ID" />
+						</div>
+						<div class="form-group col-md-2">
+							<button type="submit" class="btn btn-primary btn-round">Search</button>
+						</div>
+					</div>
+
+				</form>
+
+				<p>
+					<a asp-action="Create" class="btn btn-primary">Create New Book</a>
+				</p>
+
+				<div class="table-responsive">
+					<table class="table">
+						<thead class="text-primary">
+							<tr>
+								<th>
+									<a asp-action="Index" asp-route-sortOrder="@ViewData["TitleSortParm"]">Title</a>
+								</th>
+								<th>
+									<a asp-action="Index" asp-route-sortOrder="@ViewData["AuthorSortParm"]">Author</a>
+								</th>
+								<th>
+									<a asp-action="Index" asp-route-sortOrder="@ViewData["GenreSortParm"]">Genre</a>
+								</th>
+								<th>
+									<a asp-action="Index" asp-route-sortOrder="@ViewData["ReleaseDateSortParm"]">Release Date</a>
+								</th>
+								<th>ID</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (var book in Model)
+							{
+								<tr>
+									<td>@book.Title</td>
+									<td>@book.Author</td>
+									<td>@book.Genre</td>
+									<td>@book.ReleaseDate.ToShortDateString()</td>
+									<td>@book.Id</td>
+									<td>
+										<a asp-action="Details" class="btn btn-info btn-outline-info btn-sm" asp-route-id="@book.Id">Details</a>
+										<a asp-action="Edit" class="btn btn-primary btn-outline-primary btn-sm" asp-route-id="@book.Id">Edit</a>
+										<a asp-action="Delete" class="btn btn-danger btn-outline-danger btn-sm" asp-route-id="@book.Id">Delete</a>
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
-	
-</form>
-
-<p>
-	<a asp-action="Create" class="btn btn-primary">Create New Book</a>
-</p>
-
-<div class="table-responsive">
-<table class="table">
-	<thead class="text-primary">
-	<tr>
-		<th>
-			<a asp-action="Index" asp-route-sortOrder="@ViewData["TitleSortParm"]">Title</a>
-		</th>
-		<th>
-			<a asp-action="Index" asp-route-sortOrder="@ViewData["AuthorSortParm"]">Author</a>
-		</th>
-		<th>
-			<a asp-action="Index" asp-route-sortOrder="@ViewData["GenreSortParm"]">Genre</a>
-		</th>
-		<th>
-			<a asp-action="Index" asp-route-sortOrder="@ViewData["ReleaseDateSortParm"]">Release Date</a>
-		</th>
-		<th>Id</th>
-		<th>Actions</th>
-	</tr>
-	</thead>
-	<tbody>
-					@foreach (var book in Model)
-					{
-				<tr>
-					<td>@book.Title</td>
-					<td>@book.Author</td>
-					<td>@book.Genre</td>
-					<td>@book.ReleaseDate.ToShortDateString()</td>
-					<td>@book.Id</td>
-					<td>
-						<a asp-action="Details" class="btn btn-info btn-outline-info btn-sm" asp-route-id="@book.Id">Details</a> 
-						<a asp-action="Edit" class="btn btn-primary btn-outline-primary btn-sm" asp-route-id="@book.Id">Edit</a> 
-						<a asp-action="Delete" class="btn btn-danger btn-outline-danger btn-sm" asp-route-id="@book.Id">Delete</a>
-					</td>
-				</tr>
-					}
-	</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
 </div>

@@ -5,25 +5,41 @@
     var books = (IEnumerable<Library.Models.Book>)ViewBag.Books;
 }
 
-<h2>Create New User</h2>
+<div class="panel-header panel-header-sm">
+</div>
 
-<form asp-action="Create" method="post">
-    <div>
-        <label>First Name</label>
-        <input asp-for="FirstName" class="form-control"/>
-    </div>
-    <div>
-        <label>Second Name</label>
-        <input asp-for="SecondName" class="form-control"/>
-    </div>
-    <div>
-        <label>Books</label>
-        <select asp-for="Books" asp-items="@(new MultiSelectList(books, "Id", "Title"))" multiple class="form-control" name="selectedBookIds">
-        </select>
-    </div>
-    <button type="submit" class="btn btn-primary">Save</button>
-</form>
+<div class="content">
+    <div class="col-lg-5">
+        <div class="card card-chart">
+            <div class="card-header">
+                <h5 class="card-category">User Create</h5>
+                <h3 class="card-title"><strong>Add new user</strong></h3>
+            </div>
 
-<p>
-    <a asp-action="Index">Back to List</a>
-</p>
+            <div class="card-body">
+                <form asp-action="Create" method="post">
+                    <div>
+                        <label>First Name</label>
+                        <input asp-for="FirstName" class="form-control" />
+                    </div>
+                    <div>
+                        <label>Second Name</label>
+                        <input asp-for="SecondName" class="form-control" />
+                    </div>
+                    <div>
+                        <label>Books</label>
+                        <select asp-for="Books" asp-items="@(new MultiSelectList(books, "Id", "Title"))" multiple class="form-control" name="selectedBookIds">
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+                <p>
+                    <a class="btn btn-primary btn-outline-primary" asp-action="Index">
+                        <i class="now-ui-icons ui-1_simple-remove"></i> Cancel
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
