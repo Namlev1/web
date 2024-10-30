@@ -4,17 +4,48 @@ ViewData["Title"] = "Book details";
 ViewData["Active"] = "Books";
 }
 
-<h2>Book Details</h2>
-
-<div>
-    <h4>@Model.Title</h4>
-    <p><strong>Author:</strong> @Model.Author</p>
-    <p><strong>ISBN:</strong> @Model.ISBN</p>
-    <p><strong>Release Date:</strong> @Model.ReleaseDate.ToString("yyyy-MM-dd")</p>
-    <p><strong>Genre:</strong> @Model.Genre</p>
-    <p><strong>Id:</strong> @Model.Id</p>
+<div class="panel-header panel-header-sm">
 </div>
 
-<p>
-    <a asp-action="Index">Back to List</a>
-</p>
+<div class="content">
+    <div class="col-lg-5">
+        <div class="card card-chart">
+            <div class="card-header"> 
+                <h5 class="card-category">Book Details</h5>
+                <h3 class="card-title"><strong>@Model.Title</strong></h3>
+                <p class="card-subtitle" style="margin-top: 4px">By: @Model.Author</p>
+                
+            </div>
+
+            <div class="card-body">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><strong>Release date:</strong></td>
+                            <td>@Model.ReleaseDate.ToString("dd MMMM yyyy", @Model.ci)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ISBN:</strong></td>
+                            <td>@Model.ISBN</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Genre:</strong></td>
+                            <td> @Model.Genre</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Id:</strong></td>
+                            <td>@Model.Id</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    <a class="btn btn-primary" asp-action="Index">
+                        <i class="now-ui-icons arrows-1_minimal-left"></i> Back to List
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>

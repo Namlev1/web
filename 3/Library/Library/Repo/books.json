@@ -1,18 +1,101 @@
 [
   {
-    "Id": 2,
-    "Title": "Title2",
-    "Author": "Author2",
-    "ISBN": "2",
-    "ReleaseDate": "2222-02-22T00:00:00",
-    "Genre": "Genre2"
+    "ci": "en-GB",
+    "Id": 1,
+    "Title": "Pride and Prejudice",
+    "Author": "Jane Austen",
+    "ISBN": "9780141040349",
+    "ReleaseDate": "1813-01-28T00:00:00",
+    "Genre": "Fiction"
   },
   {
+    "ci": "en-GB",
+    "Id": 2,
+    "Title": "1984",
+    "Author": "George Orwell",
+    "ISBN": "9780451524935",
+    "ReleaseDate": "1949-06-08T00:00:00",
+    "Genre": "Dystopian"
+  },
+  {
+    "ci": "en-GB",
     "Id": 3,
-    "Title": "Title4",
-    "Author": "Author4",
-    "ISBN": "4",
-    "ReleaseDate": "4444-04-04T00:00:00",
-    "Genre": "4"
+    "Title": "To Kill a Mockingbird",
+    "Author": "Harper Lee",
+    "ISBN": "9780061120084",
+    "ReleaseDate": "1960-07-11T00:00:00",
+    "Genre": "Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 4,
+    "Title": "The Great Gatsby",
+    "Author": "F. Scott Fitzgerald",
+    "ISBN": "9780743273565",
+    "ReleaseDate": "1925-04-10T00:00:00",
+    "Genre": "Classic"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 5,
+    "Title": "Moby Dick",
+    "Author": "Herman Melville",
+    "ISBN": "9781503280786",
+    "ReleaseDate": "1851-10-18T00:00:00",
+    "Genre": "Adventure"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 6,
+    "Title": "War and Peace",
+    "Author": "Leo Tolstoy",
+    "ISBN": "9781400079988",
+    "ReleaseDate": "1869-01-01T00:00:00",
+    "Genre": "Historical Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 7,
+    "Title": "The Catcher in the Rye",
+    "Author": "J.D. Salinger",
+    "ISBN": "9780316769488",
+    "ReleaseDate": "1951-07-16T00:00:00",
+    "Genre": "Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 8,
+    "Title": "The Hobbit",
+    "Author": "J.R.R. Tolkien",
+    "ISBN": "9780547928227",
+    "ReleaseDate": "1937-09-21T00:00:00",
+    "Genre": "Fantasy"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 9,
+    "Title": "The Brothers Karamazov",
+    "Author": "Fyodor Dostoevsky",
+    "ISBN": "9780374528379",
+    "ReleaseDate": "1880-11-01T00:00:00",
+    "Genre": "Philosophical Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 10,
+    "Title": "Crime and Punishment",
+    "Author": "Fyodor Dostoevsky",
+    "ISBN": "9780486415871",
+    "ReleaseDate": "1866-01-01T00:00:00",
+    "Genre": "Psychological Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 11,
+    "Title": "The Midnight Library",
+    "Author": "Matt Haig",
+    "ISBN": "9780525559474",
+    "ReleaseDate": "2020-08-18T00:00:00",
+    "Genre": "Fantasy"
   }
 ]
