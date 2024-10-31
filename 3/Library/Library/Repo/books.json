@@ -97,5 +97,383 @@
     "ISBN": "9780525559474",
     "ReleaseDate": "2020-08-18T00:00:00",
     "Genre": "Fantasy"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 12,
+    "Title": "Brave New World",
+    "Author": "Aldous Huxley",
+    "ISBN": "9780060850524",
+    "ReleaseDate": "1932-01-01T00:00:00",
+    "Genre": "Dystopian"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 13,
+    "Title": "Jane Eyre",
+    "Author": "Charlotte Brontë",
+    "ISBN": "9780141441146",
+    "ReleaseDate": "1847-10-16T00:00:00",
+    "Genre": "Gothic Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 14,
+    "Title": "The Road",
+    "Author": "Cormac McCarthy",
+    "ISBN": "9780307387899",
+    "ReleaseDate": "2006-09-26T00:00:00",
+    "Genre": "Post-Apocalyptic"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 15,
+    "Title": "One Hundred Years of Solitude",
+    "Author": "Gabriel García Márquez",
+    "ISBN": "9780060883287",
+    "ReleaseDate": "1967-06-05T00:00:00",
+    "Genre": "Magical Realism"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 16,
+    "Title": "Les Misérables",
+    "Author": "Victor Hugo",
+    "ISBN": "9780451419438",
+    "ReleaseDate": "1862-01-01T00:00:00",
+    "Genre": "Historical Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 17,
+    "Title": "The Picture of Dorian Gray",
+    "Author": "Oscar Wilde",
+    "ISBN": "9780141442464",
+    "ReleaseDate": "1890-07-20T00:00:00",
+    "Genre": "Philosophical Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 19,
+    "Title": "Sapiens: A Brief History of Humankind",
+    "Author": "Yuval Noah Harari",
+    "ISBN": "9780062316110",
+    "ReleaseDate": "2011-01-01T00:00:00",
+    "Genre": "Non-Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 20,
+    "Title": "The Grapes of Wrath",
+    "Author": "John Steinbeck",
+    "ISBN": "9780143039433",
+    "ReleaseDate": "1939-04-14T00:00:00",
+    "Genre": "Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 21,
+    "Title": "A Tale of Two Cities",
+    "Author": "Charles Dickens",
+    "ISBN": "9781853262647",
+    "ReleaseDate": "1859-04-30T00:00:00",
+    "Genre": "Historical Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 22,
+    "Title": "The Alchemist",
+    "Author": "Paulo Coelho",
+    "ISBN": "9780061122415",
+    "ReleaseDate": "1988-04-15T00:00:00",
+    "Genre": "Fantasy"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 23,
+    "Title": "Fahrenheit 451",
+    "Author": "Ray Bradbury",
+    "ISBN": "9781451673319",
+    "ReleaseDate": "1953-10-19T00:00:00",
+    "Genre": "Dystopian"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 24,
+    "Title": "Don Quixote",
+    "Author": "Miguel de Cervantes",
+    "ISBN": "9780060934347",
+    "ReleaseDate": "1605-01-16T00:00:00",
+    "Genre": "Adventure"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 25,
+    "Title": "Maus",
+    "Author": "Art Spiegelman",
+    "ISBN": "9780679406419",
+    "ReleaseDate": "1980-01-01T00:00:00",
+    "Genre": "Graphic Novel"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 26,
+    "Title": "The Handmaid's Tale",
+    "Author": "Margaret Atwood",
+    "ISBN": "9780385490818",
+    "ReleaseDate": "1985-09-01T00:00:00",
+    "Genre": "Dystopian"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 27,
+    "Title": "Frankenstein",
+    "Author": "Mary Shelley",
+    "ISBN": "9780141439471",
+    "ReleaseDate": "1818-01-01T00:00:00",
+    "Genre": "Science Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 28,
+    "Title": "Dracula",
+    "Author": "Bram Stoker",
+    "ISBN": "9780141439846",
+    "ReleaseDate": "1897-05-26T00:00:00",
+    "Genre": "Horror"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 29,
+    "Title": "A Brief History of Time",
+    "Author": "Stephen Hawking",
+    "ISBN": "9780553380163",
+    "ReleaseDate": "1988-04-01T00:00:00",
+    "Genre": "Non-Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 30,
+    "Title": "The Count of Monte Cristo",
+    "Author": "Alexandre Dumas",
+    "ISBN": "9780140449266",
+    "ReleaseDate": "1844-01-01T00:00:00",
+    "Genre": "Adventure"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 31,
+    "Title": "Anna Karenina",
+    "Author": "Leo Tolstoy",
+    "ISBN": "9780140449174",
+    "ReleaseDate": "1877-01-01T00:00:00",
+    "Genre": "Literary Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 32,
+    "Title": "Catch-22",
+    "Author": "Joseph Heller",
+    "ISBN": "9781451626650",
+    "ReleaseDate": "1961-11-10T00:00:00",
+    "Genre": "Satire"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 33,
+    "Title": "The Odyssey",
+    "Author": "Homer",
+    "ISBN": "9780140268867",
+    "ReleaseDate": "1961-11-10T00:00:00",
+    "Genre": "Epic"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 34,
+    "Title": "The Divine Comedy",
+    "Author": "Dante Alighieri",
+    "ISBN": "9780140448955",
+    "ReleaseDate": "1320-01-01T00:00:00",
+    "Genre": "Epic Poetry"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 35,
+    "Title": "The Old Man and the Sea",
+    "Author": "Ernest Hemingway",
+    "ISBN": "9780684801223",
+    "ReleaseDate": "1952-09-01T00:00:00",
+    "Genre": "Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 36,
+    "Title": "Lolita",
+    "Author": "Vladimir Nabokov",
+    "ISBN": "9780679723165",
+    "ReleaseDate": "1955-09-01T00:00:00",
+    "Genre": "Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 37,
+    "Title": "Beloved",
+    "Author": "Toni Morrison",
+    "ISBN": "9781400033416",
+    "ReleaseDate": "1987-09-01T00:00:00",
+    "Genre": "Historical Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 38,
+    "Title": "Ulysses",
+    "Author": "James Joyce",
+    "ISBN": "9780141182805",
+    "ReleaseDate": "1922-02-02T00:00:00",
+    "Genre": "Modernist"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 39,
+    "Title": "The Book Thief",
+    "Author": "Markus Zusak",
+    "ISBN": "9780375842207",
+    "ReleaseDate": "2005-03-14T00:00:00",
+    "Genre": "Historical Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 40,
+    "Title": "Slaughterhouse-Five",
+    "Author": "Kurt Vonnegut",
+    "ISBN": "9780440180296",
+    "ReleaseDate": "1969-03-31T00:00:00",
+    "Genre": "Science Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 41,
+    "Title": "The Shining",
+    "Author": "Stephen King",
+    "ISBN": "9780307743657",
+    "ReleaseDate": "1977-01-28T00:00:00",
+    "Genre": "Horror"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 42,
+    "Title": "The Bell Jar",
+    "Author": "Sylvia Plath",
+    "ISBN": "9780060837020",
+    "ReleaseDate": "1963-01-14T00:00:00",
+    "Genre": "Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 43,
+    "Title": "The Kite Runner",
+    "Author": "Khaled Hosseini",
+    "ISBN": "9781594631931",
+    "ReleaseDate": "2003-05-29T00:00:00",
+    "Genre": "Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 44,
+    "Title": "Life of Pi",
+    "Author": "Yann Martel",
+    "ISBN": "9780156027328",
+    "ReleaseDate": "2001-09-11T00:00:00",
+    "Genre": "Adventure Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 45,
+    "Title": "Gone with the Wind",
+    "Author": "Margaret Mitchell",
+    "ISBN": "9781416548942",
+    "ReleaseDate": "1936-06-30T00:00:00",
+    "Genre": "Historical Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 46,
+    "Title": "The Sun Also Rises",
+    "Author": "Ernest Hemingway",
+    "ISBN": "9780743297332",
+    "ReleaseDate": "1926-10-22T00:00:00",
+    "Genre": "Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 47,
+    "Title": "Dune",
+    "Author": "Frank Herbert",
+    "ISBN": "9780441172719",
+    "ReleaseDate": "1965-08-01T00:00:00",
+    "Genre": "Science Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 48,
+    "Title": "Things Fall Apart",
+    "Author": "Chinua Achebe",
+    "ISBN": "9780385474542",
+    "ReleaseDate": "1958-01-01T00:00:00",
+    "Genre": "Historical Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 49,
+    "Title": "The Metamorphosis",
+    "Author": "Franz Kafka",
+    "ISBN": "9780805210575",
+    "ReleaseDate": "1915-01-01T00:00:00",
+    "Genre": "Philosophical Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 50,
+    "Title": "Pale Fire",
+    "Author": "Vladimir Nabokov",
+    "ISBN": "9780679723424",
+    "ReleaseDate": "1962-07-01T00:00:00",
+    "Genre": "Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 51,
+    "Title": "White Teeth",
+    "Author": "Zadie Smith",
+    "ISBN": "9780375703867",
+    "ReleaseDate": "2000-01-01T00:00:00",
+    "Genre": "Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 53,
+    "Title": "The Trial",
+    "Author": "Franz Kafka",
+    "ISBN": "9780805209999",
+    "ReleaseDate": "1925-01-01T00:00:00",
+    "Genre": "Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 54,
+    "Title": "A Farewell to Arms",
+    "Author": "Ernest Hemingway",
+    "ISBN": "9780684801469",
+    "ReleaseDate": "1929-09-27T00:00:00",
+    "Genre": "War Fiction"
+  },
+  {
+    "ci": "en-GB",
+    "Id": 55,
+    "Title": "The Sound and the Fury",
+    "Author": "William Faulkner",
+    "ISBN": "9780679732242",
+    "ReleaseDate": "1929-10-07T00:00:00",
+    "Genre": "Southern Gothic"
   }
 ]
