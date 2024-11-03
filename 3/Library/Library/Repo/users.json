@@ -8,5 +8,10 @@
     "Id": 2,
     "FirstName": "Michał",
     "SecondName": "Kwiatkowski"
+  },
+  {
+    "Id": 3,
+    "FirstName": "Mikołaj",
+    "SecondName": "Pątkowski"
   }
 ]

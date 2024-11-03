@@ -46,5 +46,69 @@
     "LoanDate": "2024-11-03T16:41:10",
     "DueDate": "2024-12-12T00:00:00",
     "IsReturned": false
+  },
+  {
+    "Id": 8,
+    "UserId": 1,
+    "BookId": 1,
+    "LoanDate": "2024-11-03T20:50:26",
+    "DueDate": "2024-11-14T00:00:00",
+    "IsReturned": false
+  },
+  {
+    "Id": 7,
+    "UserId": 2,
+    "BookId": 43,
+    "LoanDate": "2024-10-03T16:41:10",
+    "DueDate": "2024-11-12T00:00:00",
+    "IsReturned": true
+  },
+  {
+    "Id": 8,
+    "UserId": 1,
+    "BookId": 1,
+    "LoanDate": "2024-10-03T20:50:26",
+    "DueDate": "2024-10-14T00:00:00",
+    "IsReturned": true
+  },
+  {
+    "Id": 9,
+    "UserId": 2,
+    "BookId": 21,
+    "LoanDate": "2024-11-03T23:27:40",
+    "DueDate": "2024-11-27T00:00:00",
+    "IsReturned": false
+  },
+  {
+    "Id": 10,
+    "UserId": 3,
+    "BookId": 1,
+    "LoanDate": "2024-11-03T23:37:12",
+    "DueDate": "2024-11-20T00:00:00",
+    "IsReturned": false
+  },
+  {
+    "Id": 11,
+    "UserId": 3,
+    "BookId": 42,
+    "LoanDate": "2024-11-03T23:37:26",
+    "DueDate": "2024-11-24T00:00:00",
+    "IsReturned": false
+  },
+  {
+    "Id": 12,
+    "UserId": 3,
+    "BookId": 4,
+    "LoanDate": "2024-11-03T23:37:38",
+    "DueDate": "2024-11-13T00:00:00",
+    "IsReturned": false
+  },
+  {
+    "Id": 13,
+    "UserId": 3,
+    "BookId": 14,
+    "LoanDate": "2024-11-03T23:37:48",
+    "DueDate": "2024-11-29T00:00:00",
+    "IsReturned": false
   }
 ]

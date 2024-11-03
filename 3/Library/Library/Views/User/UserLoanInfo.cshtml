@@ -32,8 +32,8 @@
                             {
                                 <tr>
                                     <td>@ViewBag.BookNames[loan.BookId]</td>
-                                    <td>@loan.LoanDate</td>
-                                    <td>@loan.DueDate</td>
+                                    <td>@loan.LoanDate.ToString("dd.MM.yyyy")</td>
+                                    <td>@loan.DueDate.ToString("dd.MM.yyyy")</td>
                                     <td>
                                         <a asp-action="CloseLoan" class="btn btn-info btn-sm" asp-route-id="@loan.Id">Mark as returned</a>
                                     </td>

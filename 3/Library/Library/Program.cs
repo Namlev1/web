@@ -18,10 +18,21 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
     "default",
     "{controller=User}/{action=Index}/{id?}");
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    endpoints.MapControllers();  // This enables attribute-based routing for controllers
+});
 
 app.Run();
