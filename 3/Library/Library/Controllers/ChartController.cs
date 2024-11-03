@@ -2,7 +2,7 @@
 
 namespace Library.Controllers
 {
-    public class LoanController1 : Controller
+    public class ChartController : Controller
     {
         public IActionResult Index()
         {
