@@ -1,0 +1,50 @@
+[
+  {
+    "Id": 1,
+    "UserId": 1,
+    "BookId": 29,
+    "LoanDate": "2024-11-01T21:53:19",
+    "DueDate": "2024-11-25T00:00:00",
+    "IsReturned": true
+  },
+  {
+    "Id": 3,
+    "UserId": 1,
+    "BookId": 41,
+    "LoanDate": "2024-11-03T14:37:26",
+    "DueDate": "2024-01-01T00:00:00",
+    "IsReturned": false
+  },
+  {
+    "Id": 4,
+    "UserId": 1,
+    "BookId": 33,
+    "LoanDate": "2024-11-03T15:09:28",
+    "DueDate": "2025-01-01T00:00:00",
+    "IsReturned": true
+  },
+  {
+    "Id": 5,
+    "UserId": 1,
+    "BookId": 5,
+    "LoanDate": "2024-11-03T15:51:11",
+    "DueDate": "0001-01-01T00:00:00",
+    "IsReturned": true
+  },
+  {
+    "Id": 6,
+    "UserId": 1,
+    "BookId": 47,
+    "LoanDate": "2024-11-03T16:38:12",
+    "DueDate": "2024-11-10T00:00:00",
+    "IsReturned": false
+  },
+  {
+    "Id": 7,
+    "UserId": 2,
+    "BookId": 43,
+    "LoanDate": "2024-11-03T16:41:10",
+    "DueDate": "2024-12-12T00:00:00",
+    "IsReturned": false
+  }
+]

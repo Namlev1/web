@@ -7,7 +7,8 @@ namespace Library.Controllers
     public class BookController : Controller
     {
         private readonly JsonRepository<Book> _bookRepo = new JsonRepository<Book>("Repo/books.json");
-        private readonly JsonRepository<User> _userRepo = new JsonRepository<User>("Repo/users.json");
+        //private readonly JsonRepository<User> _userRepo = new JsonRepository<User>("Repo/users.json");
+        private readonly JsonRepository<Loan> _loanRepo = new JsonRepository<Loan>("Repo/loans.json");
 
         public IActionResult Index(string searchString, string sortOrder)
         {
@@ -98,11 +99,13 @@ namespace Library.Controllers
             return View(book);
         }
 
+        
         public IActionResult Delete(int id)
         {
             var book = _bookRepo.GetById(id);
             return book == null ? NotFound() : (IActionResult)View(book);
         }
+
 
         [HttpPost, ActionName("DeleteConfirmed")]
         public IActionResult DeleteConfirmed(int id)
@@ -113,15 +116,9 @@ namespace Library.Controllers
                 return NotFound();
             }
 
-            // Remove book from all users
-            var users = _userRepo.GetAll();
-            foreach (var user in users)
-            {
-                user.Books.RemoveAll(b => b.Id == id);
-            }
-
-            // Save updated users
-            _userRepo.SaveData(users);
+            var loans = _loanRepo.GetAll();
+            loans.RemoveAll(l => l.BookId == id);
+            _loanRepo.SaveData(loans);
 
             // Delete the book
             _bookRepo.Delete(id);

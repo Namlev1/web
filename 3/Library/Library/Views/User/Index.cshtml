@@ -42,11 +42,11 @@
                                     <a asp-action="Index" asp-route-sortOrder="@ViewData["SecondNameSortParm"]">Second Name</a>
                                 </th>
                                 <th>
-                                    <a asp-action="Index" asp-route-sortOrder="@ViewData["BookCountSortParm"]">Number of Books</a>
+                                    <a asp-action="Index" asp-route-sortOrder="@ViewData["LoanCountSortParm"]">Number of Loaned Books</a>
                                 </th>
-                                <th>Books</th>
                                 <th>ID</th>
                                 <th>Actions</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -55,25 +55,25 @@
                                 <tr>
                                     <td>@user.FirstName</td>
                                     <td>@user.SecondName</td>
-                                    <td>@user.Books.Count</td>
-                                    <td>
-                                        @if (user.Books.Count > 0)
+                                    
+                                        @if (ViewBag.BookLoans.ContainsKey(user.Id))
                                         {
-                                            <ul style ="padding-left: 10px">
-                                                @foreach (var book in user.Books)
-                                                {
-                                                    <li>@book.Title</li>
-                                                }
-                                            </ul>
+                                        <td>
+                                            @ViewBag.BookLoans[user.Id]
+                                        </td>
                                         }
                                         else
                                         {
-                                            <span>No books assigned</span>
+                                        <td>0</td>
+
                                         }
-                                    </td>
+
+                                    
                                     <td>@user.Id</td>
                                     <td>
-                                        <a asp-action="Details" class="btn btn-info btn-outline-info btn-sm" asp-route-id="@user.Id">Details</a>
+                                        <a asp-action="NewLoan" class="btn btn-primary btn-sm" asp-route-id="@user.Id">New Loan</a>  
+                                        <a asp-action="UserLoanInfo" class="btn btn-info btn-sm" asp-route-id="@user.Id">Manage Loans</a> 
+                                        
                                         <a asp-action="Edit" class="btn btn-primary btn-outline-primary btn-sm" asp-route-id="@user.Id">Edit</a>
                                         <a asp-action="Delete" class="btn btn-danger btn-outline-danger btn-sm" asp-route-id="@user.Id">Delete</a>
                                     </td>
