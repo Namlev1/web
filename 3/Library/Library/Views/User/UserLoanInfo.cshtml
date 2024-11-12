@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Library.Models.Loan>
+@{
+    ViewData["Title"] = "Loan Info";
+    ViewData["Active"] = "Users";
+}
+<div class="panel-header panel-header-sm">
+</div>
+
+<div class="content">
+    <div class="col-lg-5">
+        <div class="card card-chart">
+            <div class="card-header">
+                <h5 class="card-category">Loan Info</h5>
+                <h3 class="card-title"><strong>Loaned books for @ViewData["userFName"] @ViewData["userSName"]</strong></h3>
+
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="text-primary">
+                            <tr>
+                                <th>Title</th>
+                                <th>Loan Date</th>
+                                <th>Due Date</th>
+                                <th>Actions</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var loan in Model)
+                            {
+                                <tr>
+                                    <td>@ViewBag.BookNames[loan.BookId]</td>
+                                    <td>@loan.LoanDate.ToString("dd.MM.yyyy")</td>
+                                    <td>@loan.DueDate.ToString("dd.MM.yyyy")</td>
+                                    <td>
+                                        <a asp-action="CloseLoan" class="btn btn-info btn-sm" asp-route-id="@loan.Id">Mark as returned</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    <a class="btn btn-primary" asp-action="Index">
+                        <i class="now-ui-icons arrows-1_minimal-left"></i> Back to List
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>

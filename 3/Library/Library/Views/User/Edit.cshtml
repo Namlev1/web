@@ -27,11 +27,7 @@
                         <label>Second Name</label>
                         <input asp-for="SecondName" class="form-control" />
                     </div>
-                    <div>
-                        <label>Books</label>
-                        <select asp-for="Books" asp-items="@(new MultiSelectList(books, "Id", "Title", selectedBooks))" multiple class="form-control" name="selectedBookIds">
-                        </select>
-                    </div>
+
 
                     <button type="submit" class="btn btn-primary">
                         <i class="now-ui-icons ui-1_check"></i> Save Changes

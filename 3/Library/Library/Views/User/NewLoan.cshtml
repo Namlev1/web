@@ -1,0 +1,31 @@
+﻿@model Library.Models.User
+@{
+    ViewData["Title"] = "New loan";
+    ViewData["Active"] = "Users";
+}
+
+<div class="panel-header panel-header-sm">
+</div>
+
+<div class="content">
+    <div class="col-lg-5">
+        <div class="card card-chart">
+            <div class="card-header">
+                <h5 class="card-category">New Loan</h5>
+                <h3 class="card-title"><strong>New book loan for @Model.FirstName @Model.SecondName</strong></h3>
+
+            </div>
+
+            <div class="card-body">
+                @await Html.PartialAsync("_LoanForm", new Loan())
+
+                <p>
+                    <a class="btn btn-primary" asp-action="Index">
+                        <i class="now-ui-icons arrows-1_minimal-left"></i> Back to List
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
