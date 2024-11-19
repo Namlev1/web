@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MauiProj.Models"
              x:Class="MauiProj.Views.ProductsPage"
              Title="Products">
 
@@ -9,16 +10,31 @@
                 Command="{Binding AddProductCommand}" 
                 Margin="0,0,0,10"/>
 
-        <CollectionView ItemsSource="{Binding Products}" SelectionMode="Single">
+        <CollectionView ItemsSource="{Binding Products}" SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame BorderColor="Gray" Padding="10" Margin="0,0,0,10">
-                        <StackLayout>
-                            <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="20"/>
-                            <Label Text="{Binding Description}" FontSize="14"/>
-                            <Label Text="{Binding Price, StringFormat='Price: {0:C}'}" FontSize="14"/>
-                        </StackLayout>
-                    </Frame>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Delete"
+                                           BackgroundColor="Red"
+                                           Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProductsViewModel}}, Path=DeleteCommand}"
+                                           CommandParameter="{Binding .}"/>
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <Frame BorderColor="Gray" Padding="10" Margin="0,0,0,10">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                           Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProductsViewModel}}, Path=DetailsCommand}"
+                                           CommandParameter="{Binding .}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout>
+                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="20"/>
+                                <Label Text="{Binding Description}" FontSize="14"/>
+                                <Label Text="{Binding Price, StringFormat='Price: {0:C}'}" FontSize="14"/>
+                            </StackLayout>
+                        </Frame>
+                    </SwipeView>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

@@ -8,7 +8,7 @@ namespace MauiProj
         public App(ProductsPage productsPage)
         {
             InitializeComponent();
-            MainPage = new NavigationPage(productsPage);
+            MainPage = new AppShell();
         }
     }
 }

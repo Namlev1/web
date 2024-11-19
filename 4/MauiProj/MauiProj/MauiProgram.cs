@@ -25,6 +25,10 @@ namespace MauiProj
             builder.Services.AddSingleton<IProductService, ProductService>();
             builder.Services.AddSingleton<ProductsViewModel>();
             builder.Services.AddSingleton<ProductsPage>();
+
+            builder.Services.AddTransient<ProductDetailsViewModel>();
+            builder.Services.AddTransient<ProductDetailsPage>();
+
             return builder.Build();
         }
     }

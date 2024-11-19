@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,15 @@ using System.Threading.Tasks;
 
 namespace MauiProj.Models
 {
-    public class Product
+    public partial class Product : ObservableObject
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public decimal Price { get; set; }
+        [ObservableProperty]
+        public int id;
+        [ObservableProperty]
+        public string name;
+        [ObservableProperty]
+        public string description;
+        [ObservableProperty]
+        public decimal price;
     }
 }

@@ -13,6 +13,7 @@ namespace MauiProj.Services
         private ObservableCollection<Product> _products { get; } = new();
 
         public ObservableCollection<Product> GetProducts() => _products;
+        public List<Product> GetProductList() => _products.ToList();
 
         public Product GetProductById(int id) => _products.FirstOrDefault(p => p.Id == id);
 

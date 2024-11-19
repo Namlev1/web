@@ -3,13 +3,14 @@
     x:Class="MauiProj.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiProj"
+    xmlns:views="clr-namespace:MauiProj.Views"
+    
     Shell.FlyoutBehavior="Disabled"
     Title="MauiProj">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate views:ProductsPage}"
+        Route="ProductPage" />
 
 </Shell>
