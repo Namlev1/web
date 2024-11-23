@@ -1,6 +1,5 @@
 package com.example.db.controllers;
 
-import com.example.db.model.Category;
 import com.example.db.model.dto.CategoryDto;
 import com.example.db.service.CategoryService;
 import lombok.RequiredArgsConstructor;
@@ -21,17 +20,17 @@ public class CategoryController {
     }
 
     @GetMapping("/all")
-    public List<CategoryDto> getAllTags() {
+    public List<CategoryDto> getAllCategories() {
         return categoryService.findAll();
     }
 
     @GetMapping("/id/{id}")
-    public CategoryDto getTagById(@PathVariable Long id) {
+    public CategoryDto getById(@PathVariable Long id) {
         return categoryService.findById(id);
     }
 
     @GetMapping("/name/{name}")
-    public CategoryDto getTagByName(@PathVariable String name) {
+    public CategoryDto getByName(@PathVariable String name) {
         return categoryService.findByName(name);
     }
 
