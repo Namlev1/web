@@ -1,12 +1,9 @@
 package com.example.db.controllers;
 
-import com.example.db.model.Product;
+import com.example.db.model.dto.ProductDto;
 import com.example.db.service.ProductService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,14 +12,29 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductController {
     private final ProductService productService;
-    
-    @GetMapping("/all")
-    public List<Product> all() {
-        return productService.getAllProducts();
+
+    @PostMapping(value = "/", consumes = {"application/json"})
+    public ProductDto save(@RequestBody ProductDto dto) {
+        return productService.save(dto);
     }
-    
+
+    @GetMapping("/all")
+    public List<ProductDto> all() {
+        return productService.findAll();
+    }
+
+    @GetMapping("/id/{id}")
+    public ProductDto getProductById(@PathVariable Integer id) {
+        return productService.findById(id);
+    }
+
+    @DeleteMapping("/id/{id}")
+    public void deleteById(@PathVariable Integer id) {
+        productService.deleteById(id);
+    }
+
     @PostMapping("/sample")
-    void save(){
-        productService.addSampleProducts();
+    public List<ProductDto> save() {
+        return productService.addSampleProducts();
     }
 }

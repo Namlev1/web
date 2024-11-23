@@ -4,6 +4,11 @@ import com.example.db.model.Category;
 import com.example.db.model.Product;
 import com.example.db.model.ProductDetails;
 import com.example.db.model.Tag;
+import com.example.db.model.converters.CategoryConverter;
+import com.example.db.model.converters.ProductConverter;
+import com.example.db.model.converters.ProductDetailsConverter;
+import com.example.db.model.converters.TagConverter;
+import com.example.db.model.dto.ProductDto;
 import com.example.db.repository.CategoryRepository;
 import com.example.db.repository.ProductDetailsRepository;
 import com.example.db.repository.ProductRepository;
@@ -13,6 +18,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -22,11 +29,58 @@ public class ProductService {
     private final TagRepository tagRepository;
     private final ProductDetailsRepository productDetailsRepository;
 
-    public List<Product> getAllProducts() {
-        return productRepository.findAll();
+    public ProductDto save(ProductDto dto) {
+        Product product = new Product();
+        product.setName(dto.name());
+        product.setDescription(dto.description());
+        product.setPrice(dto.price());
+        product.setDetails(ProductDetailsConverter.toDetails(dto.details()));
+
+        Category category;
+        if (dto.category().id() != null) {
+            category = categoryRepository.findById(dto.category().id()).orElseThrow();
+        } else {
+            category = CategoryConverter.toCategory(dto.category());
+        }
+        product.setCategory(category);
+
+        if (dto.tags() != null) {
+            List<Tag> tags = dto.tags().stream()
+                    .map(tagDto -> {
+                        Tag tag;
+                        if (tagDto.id() != null) {
+                            tag = tagRepository.findById(tagDto.id()).orElseThrow();
+                        } else {
+                            tag = TagConverter.toTag(tagDto);
+                        }
+                        return tag;
+                    })
+                    .collect(Collectors.toList());
+            product.setTags(tags);
+        }
+
+        product = productRepository.save(product);
+        return ProductConverter.toDto(product);
+
     }
 
-    public void addSampleProducts() {
+    public List<ProductDto> findAll() {
+        return productRepository.findAll()
+                .stream()
+                .map(ProductConverter::toDto)
+                .collect(Collectors.toList());
+    }
+
+    public ProductDto findById(Integer id) {
+        Optional<Product> product = productRepository.findById(id);
+        return product.map(ProductConverter::toDto).orElse(null);
+    }
+
+    public void deleteById(Integer id) {
+        productRepository.deleteById(id);
+    }
+
+    public List<ProductDto> addSampleProducts() {
         Category category1 = Category.builder().name("p1 - category").build();
         Category category2 = Category.builder().name("p2 - category").build();
 
@@ -43,7 +97,6 @@ public class ProductService {
         Tag tag1 = Tag.builder().name("tag1").build();
         Tag tag2 = Tag.builder().name("tag2").build();
 
-        // Save dependent objects first if they are not saved via cascade
         category1 = categoryRepository.save(category1);
         category2 = categoryRepository.save(category2);
 
@@ -69,7 +122,9 @@ public class ProductService {
         product2.setDetails(details2);
         product2.setTags(Arrays.asList(tag1, tag2));
 
-        productRepository.save(product1);
-        productRepository.save(product2);
+        product1 = productRepository.save(product1);
+        product2 = productRepository.save(product2);
+
+        return List.of(ProductConverter.toDto(product1), ProductConverter.toDto(product2));
     }
 }
