@@ -11,5 +11,6 @@ namespace MauiProj.Views
             InitializeComponent();
             BindingContext = viewModel;
         }
+
     }
 }

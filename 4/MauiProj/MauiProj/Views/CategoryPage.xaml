@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MauiProj.Models"
+             x:Class="MauiProj.Views.CategoryPage"
+             Title="Add new category">
+    <VerticalStackLayout >
+        
+        <Label Text="Name:" Grid.Row="0" Grid.Column="0" ></Label>
+        <Entry Text="{Binding NewCategory}"  Grid.Row="0" Grid.Column="1" ></Entry>
+        <Button Text="Add" Command="{Binding AddCategoryCommand}" Grid.Row="0" Grid.Column="2"></Button>
+
+
+        <CollectionView ItemsSource="{Binding AvailableCategories}" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                   <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding .}" Grid.Row="0" Grid.Column="0"/>
+                        <Button Text="Delete"
+                                Command = "{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CategoryViewModel}}, Path=DeleteCategoryCommand}"
+                                CommandParameter="{Binding .}"
+                                Grid.Row="0" Grid.Column="1"/>
+                    </Grid>
+                    
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

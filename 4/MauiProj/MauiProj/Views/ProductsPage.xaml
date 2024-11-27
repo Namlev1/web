@@ -6,9 +6,18 @@
              Title="Products">
 
     <StackLayout Padding="10">
-        <Button Text="Add Product" 
+        
+        <HorizontalStackLayout>
+            <Button Text="Add Product" 
                 Command="{Binding AddProductCommand}" 
                 Margin="0,0,0,10"/>
+            <Button Text="Manage Categories" 
+            Command="{Binding AddCategoryCommand}" 
+            Margin="0,0,0,10"/>
+            <Button Text="Refresh products" 
+            Command="{Binding RefreshCommand}" 
+            Margin="0,0,0,10"/>
+        </HorizontalStackLayout>
 
         <CollectionView ItemsSource="{Binding Products}" SelectionMode="None">
             <CollectionView.ItemTemplate>
@@ -32,6 +41,15 @@
                                 <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="20"/>
                                 <Label Text="{Binding Description}" FontSize="14"/>
                                 <Label Text="{Binding Price, StringFormat='Price: {0:C}'}" FontSize="14"/>
+                                <Label Text="{Binding Category}" FontSize="18"/>
+                                <CollectionView ItemsSource="{Binding Tags}" SelectionMode="None" ItemsLayout="HorizontalList">
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Label Text="{Binding Name}" FontSize="16" Padding="0,0,5,0"/>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+
                             </StackLayout>
                         </Frame>
                     </SwipeView>

@@ -10,12 +10,17 @@ namespace MauiProj.Services
 {
     public interface IProductService
     {
-        ObservableCollection<Product> GetProducts();
-        Product GetProductById(int id);
-        void AddProduct(Product product);
-        void UpdateProduct(Product product);
-        void DeleteProduct(int id);
-    
+        Task<List<Product>> GetProducts();
+        Task<Product> GetProductById(int id);
+        Task<Product> CreateProduct(Product product);
+        //void UpdateProduct(Product product);
+        Task<bool> DeleteProduct(int id);
+        Task<List<Tag>> GetTags();
+        Task<Tag> AddTag(string name);
+        Task<List<Category>> GetCategories();
+        Task<Category> CreateCategory(string name);
+        Task<bool> DeleteCategory(int id);
+
     }
  
 }

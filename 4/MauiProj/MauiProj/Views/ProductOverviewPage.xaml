@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MauiProj.Models"
+             x:Class="MauiProj.Views.ProductOverviewPage"
+             Title="ProductOverviewPage">
+    <VerticalStackLayout >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Name:" Grid.Row="0" Grid.Column="0" ></Label>
+            <Entry Text="{Binding Product.Name}"  Grid.Row="0" Grid.Column="1" ></Entry>
+
+            <Label Text="Description:" Grid.Row="1" Grid.Column="0" ></Label>
+            <Entry Text="{Binding Product.Description}"  Grid.Row="1" Grid.Column="1" ></Entry>
+
+            <Label Text="Price:" Grid.Row="2" Grid.Column="0" ></Label>
+            <Entry Text="{Binding Product.Price}"  Grid.Row="2" Grid.Column="1" ></Entry>
+
+            <Label Text="Manufacturer:" Grid.Row="3" Grid.Column="0" ></Label>
+            <Entry Text="{Binding  Product.Details.Manufacturer}"  Grid.Row="3" Grid.Column="1" ></Entry>
+
+            <Label Text="Warranty:" Grid.Row="4" Grid.Column="0" ></Label>
+            <Entry Text="{Binding Product.Details.Warranty}"  Grid.Row="4" Grid.Column="1" ></Entry>
+
+
+            <Label Text="Tags:" Grid.Row="5" Grid.Column="0" ></Label>
+            <Grid Grid.Row="5" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Entry Text="{Binding NewTag}" Grid.Row="0" Grid.Column="0"></Entry>
+                <Button Text="Add Tag" Command="{Binding AddTagCommand}" Grid.Row="0" Grid.Column="1"></Button>
+            </Grid>
+            <CollectionView ItemsSource="{Binding Product.Tags}"
+                            SelectionMode="None"
+                            Grid.Row="6" Grid.Column="1">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="20" Grid.Row="0" Grid.Column="0"/>
+                            <Button Text="Delete"
+                                    Command = "{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProductOverviewViewModel}}, Path=RemoveTagCommand}"
+                                    CommandParameter="{Binding .}"
+                                    Grid.Row="0" Grid.Column="1"/>
+                        </Grid>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="Category:" Grid.Row="7" Grid.Column="0" ></Label>
+            <Picker Title="Select category" ItemsSource="{Binding AvailableCategories}"  SelectedItem="{Binding Product.Category}" SelectedIndex="2"  Grid.Row="7" Grid.Column="1">
+
+            </Picker>
+
+        </Grid>
+        <HorizontalStackLayout>
+            <Button Text="Save" Command="{Binding SaveCommand}"></Button>
+            <Button Text="Delete" Command="{Binding DeleteCommand}"></Button>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

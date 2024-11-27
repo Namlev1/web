@@ -23,28 +23,54 @@ namespace MauiProj.Models
         [ObservableProperty]
         private Product _selectedProduct;
 
+        //[ObservableProperty]
+        //private ObservableCollection<Tag> _availableTags;
+
+        [ObservableProperty]
+        private ObservableCollection<Category> _availableCategories;
+
 
         public ProductsViewModel(IProductService productService)
         {
             _productService = productService;
-            Products = _productService.GetProducts();
+            GetProducts();
+            //_availableTags = productService.GetTags();
+            //_availableCategories = productService.GetCategories();
+        }
+
+        public async Task GetProducts()
+        {
+            var result = await _productService.GetProducts();
+            Products = new ObservableCollection<Product>(result);
         }
 
         
         [RelayCommand]
         public async Task AddProduct()
         {
-            _idCounter ++;
-            SelectedProduct = new Product { Id = _idCounter};
+
+            SelectedProduct = new Product {Id=-1};
 
           
-            await Shell.Current.GoToAsync(nameof(ProductDetailsPage),  new Dictionary<string, object>
+            await Shell.Current.GoToAsync(nameof(ProductOverviewPage),  new Dictionary<string, object>
             {
                 {"Product",SelectedProduct },
                 {nameof(ProductsViewModel), this }
             });
-            //var newProduct = new Product { Id = _products.Count + 1, Name = "New Product", Description = "Description", Price = 0.0m };
-            //_productService.AddProduct(newProduct);
+
+        }
+
+        [RelayCommand]
+        public async Task AddCategory()
+        {
+
+            SelectedProduct = new Product { Id = _idCounter };
+
+
+            await Shell.Current.GoToAsync(nameof(CategoryPage), new Dictionary<string, object>
+            {
+                {nameof(ProductsViewModel), this }
+            });
 
         }
 
@@ -52,7 +78,7 @@ namespace MauiProj.Models
         public async Task Details(Product p)
         {
             SelectedProduct = p;
-            await Shell.Current.GoToAsync(nameof(ProductDetailsPage), new Dictionary<string, object>
+            await Shell.Current.GoToAsync(nameof(ProductOverviewPage), new Dictionary<string, object>
             {
                 {"Product",SelectedProduct },
                 {nameof(ProductsViewModel), this }
@@ -63,6 +89,12 @@ namespace MauiProj.Models
         public async Task Delete(Product p)
         {
             _productService.DeleteProduct(p.Id);
+        }
+
+        [RelayCommand]
+        public async void Refresh()
+        {
+            GetProducts();
         }
     }
 

@@ -4,9 +4,9 @@ using MauiProj.Models;
 
 namespace MauiProj.Views;
 
-public partial class ProductDetailsPage : ContentPage
+public partial class ProductOverviewPage : ContentPage
 {
-	public ProductDetailsPage(ProductDetailsViewModel vm)
+	public ProductOverviewPage(ProductOverviewViewModel vm)
 	{
 		InitializeComponent();
 		BindingContext = vm;

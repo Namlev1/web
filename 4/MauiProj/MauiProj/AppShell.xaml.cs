@@ -8,7 +8,8 @@ namespace MauiProj
         {
             InitializeComponent();
 
-            Routing.RegisterRoute(nameof(ProductDetailsPage), typeof(ProductDetailsPage));
+            Routing.RegisterRoute(nameof(ProductOverviewPage), typeof(ProductOverviewPage));
+            Routing.RegisterRoute(nameof(CategoryPage), typeof(CategoryPage));
         }
     }
 }
