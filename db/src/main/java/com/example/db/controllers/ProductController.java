@@ -18,6 +18,11 @@ public class ProductController {
         return productService.save(dto);
     }
 
+    @PutMapping(value = "/", consumes = {"application/json"})
+    public ProductDto update(@RequestBody ProductDto dto) {
+        return productService.update(dto);
+    }
+
     @GetMapping("/all")
     public List<ProductDto> all() {
         return productService.findAll();

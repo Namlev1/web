@@ -61,7 +61,53 @@ public class ProductService {
 
         product = productRepository.save(product);
         return ProductConverter.toDto(product);
+    }
 
+    public ProductDto update(ProductDto dto) {
+        if (isDtoInvalid(dto)) {
+            return null;
+        }
+
+        Product product = productRepository.findById(dto.id()).orElseThrow();
+        product.setName(dto.name());
+        product.setDescription(dto.description());
+        product.setPrice(dto.price());
+        ProductDetails details;
+        if (dto.details().id() != null) {
+            details = productDetailsRepository.findById(dto.details().id()).orElseThrow();
+        } else {
+            details = ProductDetailsConverter.toDetails(dto.details());
+        }
+        product.setDetails(details);
+
+        Category category;
+        if (dto.category().id() != null) {
+            category = categoryRepository.findById(dto.category().id()).orElseThrow();
+        } else {
+            category = CategoryConverter.toCategory(dto.category());
+            category = categoryRepository.save(category);
+        }
+        product.setCategory(category);
+
+        List<Tag> tags = dto.tags().stream()
+                .map(tagDto -> {
+                    Tag tag;
+                    if (tagDto.id() != null) {
+                        tag = tagRepository.findById(tagDto.id()).orElseThrow();
+                    } else {
+                        tag = TagConverter.toTag(tagDto);
+                    }
+                    return tag;
+                })
+                .collect(Collectors.toList());
+        product.setTags(tags);
+
+        product = productRepository.save(product);
+        return ProductConverter.toDto(product);
+    }
+
+    private static boolean isDtoInvalid(ProductDto dto) {
+        return dto.id() == null || dto.category() == null || dto.tags() == null || dto.details() == null;
     }
 
     public List<ProductDto> findAll() {
