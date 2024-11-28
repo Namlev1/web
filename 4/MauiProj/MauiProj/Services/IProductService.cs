@@ -13,7 +13,7 @@ namespace MauiProj.Services
         Task<List<Product>> GetProducts();
         Task<Product> GetProductById(int id);
         Task<Product> CreateProduct(Product product);
-        //void UpdateProduct(Product product);
+        Task<Product> UpdateProduct(Product product);
         Task<bool> DeleteProduct(int id);
         Task<List<Tag>> GetTags();
         Task<Tag> AddTag(string name);

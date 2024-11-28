@@ -76,16 +76,17 @@ namespace MauiProj.Services
             }
         }
 
-        //public void UpdateProduct(Product product)
-        //{
-        //    var existingProduct = _products.FirstOrDefault(p => p.Id == product.Id);
-        //    if (existingProduct != null)
-        //    {
-        //        existingProduct.Name = product.Name;
-        //        existingProduct.Description = product.Description;
-        //        existingProduct.Price = product.Price;
-        //    }
-        //}
+        public async Task<Product> UpdateProduct(Product product)
+        {
+            string url = base_url + "/api/product/";
+            using (HttpClient client = new HttpClient())
+            {
+                var response = await client.PutAsJsonAsync(url, product);
+                string json = await response.Content.ReadAsStringAsync();
+                var result = JsonConvert.DeserializeObject<Product>(json);
+                return result;
+            }
+        }
 
         public async Task<bool> DeleteProduct(int id)
         {

@@ -49,22 +49,19 @@ public partial class ProductOverviewViewModel : ObservableObject
     [RelayCommand]
     public async Task Save()
     {
+        if (product.Category == null)
+        {
+            product.Category = AvailableCategories[0];
+        }
+
         Product p = await _productService.GetProductById(product.Id);
         if (p == null)
         {
-            if (product.Category == null)
-            {
-                product.Category = AvailableCategories[0];
-            }
             await CreateProduct();
         }
         else
         {
-            if (product.Category == null)
-            {
-                product.Category = AvailableCategories[0];
-            }
-            await CreateProduct();
+            await UpdateProduct();
             //await UpdateProduct(); //TODO: dodaæ update produktu
         }
 
@@ -74,14 +71,14 @@ public partial class ProductOverviewViewModel : ObservableObject
 
     public async Task CreateProduct()
     {
-        var result = await _productService.CreateProduct(product);
+        await _productService.CreateProduct(product);
     }
 
 
 
     public async Task UpdateProduct()
     {
-        //_productService.UpdateProduct(product);
+        await _productService.UpdateProduct(product);
     }
 
     [RelayCommand]
