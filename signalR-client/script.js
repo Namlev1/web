@@ -1,8 +1,9 @@
 const signalR = require("@microsoft/signalr");
 
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://localhost:5170/ticketHub") // Replace {port} with your server's port
+    .withUrl("http://localhost:5170/ticketHub")
     .build();
+
 
 // Handle incoming tickets
 connection.on("ReceiveNewTicket", (ticket) => {
@@ -10,7 +11,8 @@ connection.on("ReceiveNewTicket", (ticket) => {
     console.log("Ticket:", ticket);
 });
 
-// Handle changed tickets
+
+// Handle changed ticket statuses
 connection.on("ReceiveStatusChange", (id, newStatus) => {
     console.log("Status changed:");
     console.log(`Ticket ID: ${id}`);
@@ -18,20 +20,22 @@ connection.on("ReceiveStatusChange", (id, newStatus) => {
 });
 
 
-// Handle incoming messages
+// Handle incoming comments
 connection.on("ReceiveNewComment", (ticketId, comment) => {
     console.log("New Comment Received:");
     console.log(`Ticket ID: ${ticketId}`);
     console.log(`Comment:`, comment);
 });
 
-// happens every 5 seconds
+
+// Happens every 5 seconds, refresh task list
 connection.on("ReceiveAllTasks", (tasks) => {
     console.log("Received tasks:", tasks);
     // Update your UI with the tasks
 });
 
-// chatting
+
+// Chatting
 connection.on("ReceiveMessage", (message) => {
     console.log("Received message:", message);
     // Update your UI with the tasks
