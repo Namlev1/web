@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignalR Test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.0/signalr.min.js"></script>
+</head>
+<body>
+    <h1>SignalR Test</h1>
+    <ul id="comments"></ul>
+
+    <script>
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("http://localhost:5170/ticketHub")
+            .build();
+
+        connection.on("ReceiveNewComment", (ticketId, comment) => {
+            const list = document.getElementById("comments");
+            const item = document.createElement("li");
+            item.textContent = `Ticket ${ticketId}: ${comment.author} says "${comment.content}"`;
+            list.appendChild(item);
+        });
+
+        connection.start()
+            .then(() => console.log("Connected to SignalR"))
+            .catch(err => console.error("Error connecting:", err));
+    </script>
+</body>
+</html>
+
