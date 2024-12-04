@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="content">
+    <div class="col-lg-5" >
+        <div class="card card-chart">
+            <div class="card-header">
+                <h5 class="card-category">Global chat</h5>
+            </div>
+
+            <div class="card-body">
+                <div id="messages" style="height: 300px; overflow-y:scroll"></div>
+                <div >
+                    <input type="text" id="messageInput" placeholder="Type a message..." style="width: 80%" />
+                    <button id="sendMessageButton" style="width: 18%">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+<script src="~/js/global_chat.js" asp-append-version="true"></script>
