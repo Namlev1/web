@@ -1,0 +1,76 @@
+﻿@model _6_WebSocket.Models.Ticket
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="content">
+    <div class="col-lg-5">
+        <div class="card card-chart">
+            <div class="card-header">
+                <h5 class="card-category">Ticket details</h5>
+            </div>
+
+            <div class="card-body">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><strong>Id:</strong></td>
+                            <td>@Model.Id</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Description:</strong></td>
+                            <td>@Model.Description</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Status:</strong></td>
+                            <td> @Model.Status</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Created:</strong></td>
+                            <td>@Model.CreatedAt.ToString("dd MMMM yyyy")</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Modified:</strong></td>
+                            @if (@Model.UpdatedAt is null)
+                            {
+                                <td>-</td>
+                            }
+                            else
+                            {
+                                <td>@Model.UpdatedAt.Value.ToString("dd MMMM yyyy")</td>
+                            }
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <a asp-action="CreateComment" class="btn btn-primary" asp-route-id="@Model.Id">
+                        Add comment
+                    </a>
+                </p>
+                <div>
+                @foreach (var comment in Model.Comments)
+                {
+                    <div>
+                        <b>
+                            @comment.Author
+                        </b>
+                        :
+                        @comment.Message
+                    </div>
+                }
+                </div>
+                
+
+                <p>
+                    <a class="btn btn-primary" asp-action="Index">
+                       Back to List
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>

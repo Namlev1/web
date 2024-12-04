@@ -1,0 +1,66 @@
+﻿@model IEnumerable<_6_WebSocket.Models.Ticket>
+@{
+}
+
+
+<p>
+	<a asp-action="CreateTicket" class="btn btn-primary">
+	    Create new ticket
+	</a>
+</p>
+<div class="content">
+	<div class="row">
+		<div class="card card-chart">
+			<div class="card-header">
+				<h2 class="card-title">List of available tickets</h2>
+			</div>
+
+			<div class="card-body">
+
+				<div class="table-responsive">
+					<table class="table" id="data-table">
+						<thead class="text-primary">
+							<tr>
+								<th>ID</th>
+								<th>Status</th>
+								<th>Priority</th>
+								<th>Created</th>
+								<th>Modified</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (var ticket in Model)
+							{
+								<tr data-id="@ticket.Id">
+									<td>@ticket.Id</td>
+									<td>@ticket.Status</td>
+									<td>@ticket.Priority</td>
+									<td>@ticket.CreatedAt</td>
+									@if (@ticket.UpdatedAt == null){
+										<td>-</td>
+									}else{
+										<td>@ticket.UpdatedAt</td>
+									}
+									<td>
+											<a asp-action="Details" class="btn btn-info  btn-sm" asp-route-id="@ticket.Id">Details</a>
+
+											@if (@ticket.Status == "Open")
+											{
+												<form asp-action="CloseTicket" method="post" id="close">
+													<input type="hidden" name="id" value="@ticket.Id" />
+													<button type="submit" class="btn btn-success  btn-sm">Close ticket</button>
+												</form>
+											}
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+<script src="~/js/ws_ticket_list.js" asp-append-version="true"></script>

@@ -11,7 +11,7 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
     {
-        policy.WithOrigins("http://localhost:3000", "http://localhost:5065") // Specify your frontend URLs
+        policy.WithOrigins("http://localhost:3000", "http://localhost:5065", "ws://localhost:5170/ticketHub") // Specify your frontend URLs
             .AllowAnyMethod()
             .AllowAnyHeader()
             .AllowCredentials();
