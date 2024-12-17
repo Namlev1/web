@@ -63,4 +63,41 @@ public class TaskController : Controller
         ModelState.AddModelError(string.Empty, "Failed to create a new task");
         return View(task);
     }
+    
+    // GET: Edit task
+        public async Task<IActionResult> Edit(int id)
+        {
+            var task = await _httpClient.GetFromJsonAsync<TaskModel>($"id/{id}");
+            if (task == null)
+            {
+                return NotFound();
+            }
+            return View(task);
+        }
+    
+        // POST: Update task
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, TaskModel task)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(task);
+            }
+    
+            // Add the ID to the task to ensure it's sent for the correct task
+            task.id = id;
+    
+            var json = JsonSerializer.Serialize(task);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+    
+            var response = await _httpClient.PutAsync("", content);
+    
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+    
+            ModelState.AddModelError(string.Empty, "Failed to update task");
+            return View(task);
+        }
 }

@@ -45,6 +45,10 @@ ViewData["Title"] = "Task List";
                     Delete
                 </button>
             </form>
+            <!-- Edit Button -->
+            <a href="@Url.Action("Edit", "Task", new { id = task.id })" class="btn btn-warning btn-sm">
+                Edit
+            </a>
         </td>
     </tr>
     }
