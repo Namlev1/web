@@ -1,29 +1,27 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Dodanie usług do kontenera DI (Dependency Injection)
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Konfiguracja potoku HTTP
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    app.UseHsts(); // Bezpieczeństwo HSTS dla produkcji
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles(); // Obsługa plików statycznych (CSS, JS, obrazy)
+
 app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapStaticAssets();
-
+// Konfiguracja domyślnej trasy
 app.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
-
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
