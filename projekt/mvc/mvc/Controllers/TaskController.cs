@@ -1,8 +1,8 @@
-using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
+using System.Text;
+using System.Text.Json;
 using mvc.Models;
-
-namespace mvc.Controllers;
 
 public class TaskController : Controller
 {
@@ -10,42 +10,57 @@ public class TaskController : Controller
 
     public TaskController()
     {
-        _httpClient = new HttpClient();
-        _httpClient.BaseAddress = new Uri("http://localhost:8080/api/task/");
+        _httpClient = new HttpClient
+        {
+            BaseAddress = new Uri("http://localhost:8080/api/task/")
+        };
     }
 
+    // Akcja do wyświetlania wszystkich zadań
     public async Task<IActionResult> Index()
     {
-        var tasks = new List<TaskModel>();
-
-        try
-        {
-            // Fetch data from REST API
-            var response = await _httpClient.GetAsync("all");
-
-            if (response.IsSuccessStatusCode)
-            {
-                var json = await response.Content.ReadAsStringAsync();
-                tasks = JsonSerializer.Deserialize<List<TaskModel>>(json, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
-        }
-        catch (Exception ex)
-        {
-            // Log the error or pass an error message
-            ViewBag.Error = "Error fetching tasks: " + ex.Message;
-        }
-
+        var tasks = await _httpClient.GetFromJsonAsync<List<TaskModel>>("all");
         return View(tasks);
     }
 
-    // Akcja DELETE
+    // Akcja do usuwania zadania
+    [HttpPost]
     public async Task<IActionResult> Delete(int id)
     {
         var response = await _httpClient.DeleteAsync($"id/{id}");
-        if (response.IsSuccessStatusCode) return RedirectToAction("Index");
+        if (response.IsSuccessStatusCode)
+        {
+            return RedirectToAction("Index");
+        }
         return StatusCode((int)response.StatusCode);
+    }
+
+    // GET: Formularz do tworzenia nowego zadania
+    public IActionResult Create()
+    {
+        return View();
+    }
+
+    // POST: Tworzenie nowego zadania
+    [HttpPost]
+    public async Task<IActionResult> Create(TaskModel task)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View(task);
+        }
+
+        var json = JsonSerializer.Serialize(task);
+        var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+        var response = await _httpClient.PostAsync("", content);
+
+        if (response.IsSuccessStatusCode)
+        {
+            return RedirectToAction("Index");
+        }
+
+        ModelState.AddModelError(string.Empty, "Failed to create a new task");
+        return View(task);
     }
 }

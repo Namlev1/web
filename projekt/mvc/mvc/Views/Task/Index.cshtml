@@ -26,10 +26,10 @@ ViewData["Title"] = "Task List";
     foreach (var task in Model)
     {
     <tr>
-        <td>@task.Id</td>
-        <td>@task.Name</td>
+        <td>@task.id</td>
+        <td>@task.name</td>
         <td>
-            @if (task.Done)
+            @if (task.done)
             {
                 <span class="text-success">Completed</span>
             }
@@ -40,7 +40,7 @@ ViewData["Title"] = "Task List";
         </td>
         <td>
             <form asp-action="Delete" asp-controller="Task" method="post" style="display:inline;">
-                <input type="hidden" name="id" value="@task.Id" />
+                <input type="hidden" name="id" value="@task.id" />
                 <button type="submit" onclick="return confirm('Are you sure to delete this task?');">
                     Delete
                 </button>
@@ -57,3 +57,4 @@ ViewData["Title"] = "Task List";
     }
     </tbody>
 </table>
+<a class="nav-link text-dark" asp-area="" asp-controller="Task" asp-action="Create">Create task</a>

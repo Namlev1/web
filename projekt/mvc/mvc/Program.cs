@@ -1,7 +1,14 @@
+using System.Text.Json;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Dodanie usług do kontenera DI (Dependency Injection)
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+        .AddJsonOptions(options =>
+        {
+            // Configure JSON serializer to use camelCase (lowercase for the first letter)
+            options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+        });
 
 var app = builder.Build();
 
