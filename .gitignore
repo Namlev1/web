@@ -365,3 +365,4 @@ FodyWeavers.xsd
 # niepotrzebne katalogi
 **/obj/
 **/Debug/
+projekt/db/target/*
