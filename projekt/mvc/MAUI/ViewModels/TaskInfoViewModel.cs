@@ -6,7 +6,7 @@ using System.Collections.ObjectModel;
 
 namespace MAUI.ViewModels;
 
-[QueryProperty(nameof(TaskModel), "ViewedTask")]
+[QueryProperty("ViewedTask", "ViewedTask")]
 [QueryProperty(nameof(TaskListViewModel), "TaskListViewModel")]
 public partial class TaskInfoViewModel : ObservableObject
 {

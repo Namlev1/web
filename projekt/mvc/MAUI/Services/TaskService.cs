@@ -15,7 +15,7 @@ namespace MAUI.Services
 {
     public class TaskService : ITaskService
     {
-        private const string base_url = "http://localhost:8080";
+        private const string base_url = "http://127.0.0.1:8080/api/task/";
 
         public async Task<List<TaskModel>> GetAll()
         {

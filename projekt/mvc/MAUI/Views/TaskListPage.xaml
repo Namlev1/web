@@ -54,12 +54,12 @@
                                 </Frame.GestureRecognizers>
                                     <FlexLayout Direction="Row">
                                         <Label Text="{Binding Name}" FontSize="20" FlexLayout.Grow="1" VerticalTextAlignment="Center"
-                                               IsVisible="{Binding Done}"/>
-                                        <Label Text="Pending" FontSize="20" IsVisible="{Binding Done}"/>
+                                               IsVisible="{Binding Done, Converter={StaticResource InvertedBoolConverter}}"/>
+                                        <Label Text="Pending" FontSize="20" IsVisible="{Binding Done, Converter={StaticResource InvertedBoolConverter}}"/>
 
                                         <Label Text="{Binding Name}" TextDecorations="Strikethrough" TextColor="Gray" FontSize="20" FlexLayout.Grow="1" VerticalTextAlignment="Center"
-                                               IsVisible="{Binding Done, Converter={StaticResource InvertedBoolConverter}}"/>
-                                        <Label Text="Done" FontSize="20" IsVisible="{Binding Done, Converter={StaticResource InvertedBoolConverter}}"/>
+                                               IsVisible="{Binding Done}"/>
+                                        <Label Text="Done" FontSize="20" IsVisible="{Binding Done}"/>
                                 </FlexLayout>
                             </Frame>
                         </SwipeView>

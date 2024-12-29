@@ -54,7 +54,7 @@ public partial class TaskListViewModel : ObservableObject
         SelectedTask = task;
         await Shell.Current.GoToAsync(nameof(TaskInfoPage), new Dictionary<string, object>
             {
-                {"TaskModel",SelectedTask },
+                {"ViewedTask",SelectedTask },
                 {nameof(TaskListViewModel), this }
             });
     }
@@ -66,6 +66,16 @@ public partial class TaskListViewModel : ObservableObject
             {
                 {nameof(TaskListViewModel), this }
             });
+    }
+
+    [RelayCommand]
+    public async Task Delete(TaskModel task)
+    {
+        var result = await _taskService.Delete(task.Id ?? default(int));
+        if (result)
+        {
+            await GetTasks();
+        }
     }
 
 
