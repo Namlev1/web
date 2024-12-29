@@ -1,0 +1,47 @@
+Opis biznesowy projektu
+
+Projekt zakłada stworzenie aplikacji do zarządzania listą zadań typu TODO. Aplikacja będzie dostępna w dwóch wersjach: webowej  oraz mobilnej (opracowanej w .NET MAUI), co umożliwi użytkownikom łatwy dostęp do ich zadań z poziomu przeglądarki internetowej oraz urządzeń mobilnych (iOS, Android). Celem projektu jest dostarczenie prostego i intuicyjnego narzędzia wspierającego zarządzanie codziennymi obowiązkami, które będzie jednocześnie łatwe w obsłudze i wydajne.
+
+Zakres funkcjonalności:
+    Przeglądanie zadań:
+        Lista zadań wyświetlająca nazwę zadania oraz jego status (wykonane/nie wykonane).
+
+    Dodawanie nowych zadań:
+        Formularz umożliwiający wprowadzenie nazwy zadania.
+        Domyślne ustawienie statusu jako "nie wykonane".
+
+    Edycja istniejących zadań:
+        Możliwość zmiany nazwy zadania.
+        Aktualizacja statusu (przełączanie między "wykonane" a "nie wykonane").
+
+    Usuwanie zadań:
+        Opcja usunięcia pojedynczego zadania z listy.
+
+    Synchronizacja danych:
+        Dane przechowywane w jednej, wspólnej bazie danych, zapewniające spójność między wersją webową a mobilną.
+
+Wymagania funkcjonalne
+
+    Użytkownik aplikacji:
+        Może dodawać, przeglądać, edytować i usuwać zadania.
+        Może oznaczać zadania jako wykonane/nie wykonane.
+
+    Interfejs użytkownika (UI):
+        Przejrzysty i intuicyjny interfejs graficzny.
+        Responsywność w wersji webowej.
+        Obsługa ekranów dotykowych w aplikacji mobilnej.
+
+    Przechowywanie danych:
+        Baza danych obsługująca synchronizację między aplikacją mobilną a webową.
+
+Wymagania niefunkcjonalne
+
+    Wydajność:
+        Czas odpowiedzi interfejsu nie powinien przekraczać 1 sekundy przy standardowym obciążeniu.
+
+    Dostępność:
+        Aplikacja webowa powinna działać na najnowszych wersjach przeglądarek (Chrome, Firefox, Edge, Safari).
+        Aplikacja mobilna powinna być kompatybilna z systemami Android (od wersji 8.0) oraz iOS (od wersji 13.0).
+
+    Elastyczność:
+        Możliwość łatwego rozszerzenia aplikacji o dodatkowe funkcje w przyszłości (np. integracja z kalendarzem lub dodanie przypomnień).

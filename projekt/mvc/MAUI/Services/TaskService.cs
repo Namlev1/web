@@ -53,12 +53,20 @@ namespace MAUI.Services
             };
             HttpClient _httpClient = new HttpClient { BaseAddress = new Uri(base_url) };
             var content = new StringContent(JsonConvert.SerializeObject(newTask), Encoding.UTF8, "application/json");
-            var response = await _httpClient.PostAsync("", content);
-            if (response.IsSuccessStatusCode)
+            try
             {
-                return task;
+                var response = await _httpClient.PostAsync("", content);
+                if (response.IsSuccessStatusCode)
+                {
+                    return task;
+                }
+                else return null;
             }
-            else return null;
+            catch
+            {
+                return null;
+            }
+            
         }
 
         public async Task<TaskModel> Update(TaskModel task)
