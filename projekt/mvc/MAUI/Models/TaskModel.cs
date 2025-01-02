@@ -17,9 +17,4 @@ namespace MAUI.Models
         public bool done;
     }
 
-    public class TaskModelCreate
-    {
-        public string name { get; set; }
-        public bool done { get; set; }
-    }
 }

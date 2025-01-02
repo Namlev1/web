@@ -12,7 +12,7 @@ public class TaskController : Controller
     {
         _httpClient = new HttpClient
         {
-            BaseAddress = new Uri("http://localhost:8080/api/task/")
+            BaseAddress = new Uri("http://10.10.0.16:8080/api/task/")
         };
     }
 

@@ -15,7 +15,7 @@ namespace MAUI.Services
 {
     public class TaskService : ITaskService
     {
-        private const string base_url = "http://127.0.0.1:8080/api/task/";
+        private const string base_url = "http://10.10.0.16:8080/api/task/";
 
         public async Task<List<TaskModel>> GetAll()
         {
@@ -24,7 +24,8 @@ namespace MAUI.Services
             {
                 var tasks = await _httpClient.GetFromJsonAsync<List<TaskModel>>("all");
                 return tasks;
-            } catch {
+            } catch (Exception e)
+            {
                 return null;
             } 
         }
@@ -46,13 +47,8 @@ namespace MAUI.Services
 
         public async Task<TaskModel> Create(TaskModel task)
         {
-            TaskModelCreate newTask = new TaskModelCreate()
-            {
-                name = task.Name,
-                done = task.Done,
-            };
             HttpClient _httpClient = new HttpClient { BaseAddress = new Uri(base_url) };
-            var content = new StringContent(JsonConvert.SerializeObject(newTask), Encoding.UTF8, "application/json");
+            var content = new StringContent(JsonConvert.SerializeObject(task), Encoding.UTF8, "application/json");
             try
             {
                 var response = await _httpClient.PostAsync("", content);

@@ -19,7 +19,7 @@
     <Frame Padding="10" Margin="0,20,0,20" MaximumWidthRequest="400">
     <VerticalStackLayout  Padding="20"
                           Spacing="30"
-                          
+
                           BackgroundColor="White">
 
 
@@ -33,20 +33,35 @@
 
             <Label Text="Could not connect to the database!" FontSize="20" TextColor="Red" IsVisible="{Binding IsConnection,  Converter={StaticResource InvertedBoolConverter}}"/>
 
-            <CollectionView ItemsSource="{Binding Tasks}" SelectionMode="None" Margin="1" >
+            <CollectionView ItemsSource="{Binding Tasks}" SelectionMode="None" Margin="0" >
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                        <Frame BorderColor="White" CornerRadius="8" Padding="5" Margin="0,5">
+                        <Frame BorderColor="White" CornerRadius="8" Padding="5" Margin="0">
                             <SwipeView>
                             <SwipeView.RightItems>
                                 <SwipeItems>
-                                    <SwipeItem Text="Delete"
-                                   BackgroundColor="Red"
-                                   Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:TaskListViewModel}}, Path=DeleteCommand}"
-                                   CommandParameter="{Binding .}"/>
-                                </SwipeItems>
+                                        <SwipeItemView
+                                            BackgroundColor="White"
+                                   
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:TaskListViewModel}}, Path=DeleteCommand}"
+                                            CommandParameter="{Binding .}"
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="Center">
+
+                                            <Label Text="Delete "
+                                                   VerticalTextAlignment="Center"
+                                                   HorizontalTextAlignment="Center"
+                                                   Margin="10"
+                                                   Padding="3"
+                                                   FontAttributes="Bold"
+                                                   
+                                                    FontSize="15" TextColor="Red"
+                                                   />
+                                        </SwipeItemView>
+
+                                    </SwipeItems>
                             </SwipeView.RightItems>
-                            <Frame BorderColor="LightGray" CornerRadius="8" Padding="10" Margin="0.5">
+                            <Frame BorderColor="LightGray" CornerRadius="8" Padding="10">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer 
                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:TaskListViewModel}}, Path=DetailsCommand}"

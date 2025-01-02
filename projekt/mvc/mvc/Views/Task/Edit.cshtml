@@ -2,7 +2,7 @@
 
 <div class="content">
     <div class="col-lg-5">
-        <div class="card ">
+        <div class="card " style="padding:5px 20px 5px 20px">
             <div class="card-header">
                 <h3 class="card-title">@(Model.id == null ? "Utwórz Nowe Zadanie" : "Edytuj Zadanie")</h3>
             </div>
@@ -20,7 +20,7 @@
                         <span asp-validation-for="done" style="color:red;"></span>
                     </div>
 
-                    <button type="submit" class="btn btn-info">
+                    <button type="submit" class="btn btn-info" style="margin:25px 5px 5px 0px">
                         <i class="now-ui-icons ui-1_check"></i> Save
                     </button>
                 </form>
@@ -28,7 +28,7 @@
 
 
                 <div>
-                    <a asp-action="Index" class="btn btn-info btn-outline-info">
+                    <a asp-action="Index" class="btn btn-info btn-outline-info" style="margin:5px 5px 5px 0px">
                         <i class="now-ui-icons ui-1_simple-remove"></i> Back to list
                     </a>
 
